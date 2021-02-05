@@ -52,3 +52,16 @@ layout: default
     </div>
   </div>
 </div>
+
+<div class="container mt-5">
+  <h2 class="h5">Partenaires</h2>
+  <div class="row">
+    {% for partner in site.partners %}
+      <div class="col-md-2">
+        <a href="{{ partner.url }}">
+          <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid">
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
