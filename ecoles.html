@@ -5,7 +5,7 @@ title: Ecoles
 <div class="row">
   {% for school in site.schools %}
     <div class="col-md-2">
-      <a href="{{ partner.url }}">
+      <a href="{{ school.url }}">
         <img src="/assets/images/schools/{{ school.slug }}.png" alt="{{ school.title }}" class="img-fluid">
       </a>
       <h2 class="h6 mt-2"><a href="{{ school.url }}">{{ school.title }}</a></h2>
