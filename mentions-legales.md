@@ -11,6 +11,14 @@ title: Mentions légales
 
 [Netlify](https://netlify.com)
 
+## Code source
+
+[github/arnaudlevy/reboot](https://github.com/arnaudlevy/reboot)
+
+## Outils
+
+[Jekyll](https://jekyllrb.com/)
+
 ## Typographie
 
 [Aestetico Informal](https://latinotype.com/display-weights?font=259), par [Latinotype](https://latinotype.com/)
