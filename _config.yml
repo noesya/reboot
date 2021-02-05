@@ -1,1 +1,37 @@
 title: Reboot!
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "with-nav"
+  -
+    scope:
+      path: ""
+      type: "schools"
+    values:
+      layout: "school"
+  -
+    scope:
+      path: ""
+      type: "partners"
+    values:
+      layout: "partner"
+  -
+    scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+
+collections:
+  schools:
+    output: true
+    permalink: /ecoles/:name
+  partners:
+    output: true
+    permalink: /partenaires/:name
+  events:
+    output: true
+    permalink: /evenements/:name
