@@ -40,8 +40,7 @@ description: "Communication, Publicité, Relations presse, Relations publiques, 
     </div>
     <div class="col-md-7 col-lg-6">
       <p class="lead">
-        Le 30 septembre 2020, la proposition de loi “Publicité et transition écologique” a été rejetée par la Commission du développement durable et de l’aménagement du territoire. Pourtant, l’urgence demeure, notamment en ce qui concerne la formation des étudiants liés au secteur de la communication (publicité, relations publiques, communication des organisations, influence, communication numérique...).
-        Un an après, les écoles s’organisent et lancent leurs événements “Reboot!” avec deux jours de formation nationale et des travaux publiés sur une plateforme contributive.
+        Pour changer le monde de la communication et avancer vers une communication responsable, les écoles de communication s’organisent et lancent “Reboot!”&nbsp;: 2 jours de sensibilisation et de formation, des ressources ouvertes, des partenaires engagés et des travaux publiés sur une plateforme contributive.
       </p>
 
       <p>
@@ -55,9 +54,10 @@ description: "Communication, Publicité, Relations presse, Relations publiques, 
 </div>
 
 <div class="container mt-5">
-  <h2 class="h5">Partenaires</h2>
+  <h2 class="h5 small">Un événement proposé par...</h2>
   <div class="row">
-    {% for partner in site.partners %}
+    {% assign validated_partners = site.partners | where: 'gold', true | where: 'validated', true %}
+    {% for partner in validated_partners %}
       <div class="col-md-2">
         <a href="{{ partner.url }}">
           <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid" width="500">

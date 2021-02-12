@@ -3,8 +3,9 @@ title: Partenaires
 ---
 
 <div class="row">
-  {% for partner in site.partners %}
-    <div class="col-md-3">
+  {% assign validated_partners = site.partners | where: 'validated', true %}
+  {% for partner in validated_partners %}
+    <div class="col-md-3 mt-4">
       <a href="{{ partner.url }}">
         <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid">
       </a>
