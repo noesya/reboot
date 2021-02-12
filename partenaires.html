@@ -2,10 +2,26 @@
 title: Partenaires
 ---
 
+<h2>Partenaires “gold”</h2>
+
 <div class="row">
-  {% assign validated_partners = site.partners | where: 'validated', true %}
+  {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'gold' %}
   {% for partner in validated_partners %}
     <div class="col-md-3 mt-4">
+      <a href="{{ partner.url }}">
+        <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid">
+      </a>
+      <h2 class="h6 mt-2"><a href="{{ partner.url }}">{{ partner.title }}</a></h2>
+    </div>
+  {% endfor %}
+</div>
+
+<h2 class="mt-5">Partenaires “silver”</h2>
+
+<div class="row">
+  {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'silver'  %}
+  {% for partner in validated_partners %}
+    <div class="col-md-2 mt-4">
       <a href="{{ partner.url }}">
         <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid">
       </a>

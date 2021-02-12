@@ -54,9 +54,9 @@ description: "Communication, Publicité, Relations presse, Relations publiques, 
 </div>
 
 <div class="container mt-5">
-  <h2 class="h5 small">Un événement soutenu par...</h2>
+  <p>Un événement soutenu par...</p>
   <div class="row">
-    {% assign validated_partners = site.partners | where: 'gold', true | where: 'validated', true %}
+    {% assign validated_partners = site.partners | where: 'level', 'gold' | where: 'validated', true %}
     {% for partner in validated_partners %}
       <div class="col-md-3 col-6">
         <a href="{{ partner.url }}">
