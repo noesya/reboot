@@ -58,7 +58,7 @@ description: "Communication, Publicité, Relations presse, Relations publiques, 
   <div class="row">
     {% assign validated_partners = site.partners | where: 'gold', true | where: 'validated', true %}
     {% for partner in validated_partners %}
-      <div class="col-md-3">
+      <div class="col-md-3 col-6">
         <a href="{{ partner.url }}">
           <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid" width="500">
         </a>
@@ -95,7 +95,7 @@ description: "Communication, Publicité, Relations presse, Relations publiques, 
   <h2 class="h3 mt-5">Je suis partant&nbsp;! Comment faire pour monter à bord&nbsp;?</h2>
     <div class="offset-md-5 col-md-7 mt-3">
       <p>
-        <a href="/gouvernance">Contactez l'équipe via LinkedIn!</a>
+        <a href="/qui-sommes-nous">Contactez l'équipe via LinkedIn!</a>
       </p>
     </div>
   </div>
