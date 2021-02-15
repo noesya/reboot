@@ -1,11 +1,19 @@
 ---
 title: Partenaires
-description: Découvrez les partenaires “gold” et “silver”, qui mettent des ressouces à la disposition des écoles.
+description: Découvrez les partenaires “gold” et “silver”, qui mettent des ressources à la disposition des écoles.
 ---
 
-<h2>Partenaires “gold”</h2>
-
 <div class="row">
+  <div class="offset-md-4 col-md-8 col-xl-6">
+    <h2 class="h3">Vous avez des ressources à partager? <br>Rejoignez les partenaires!</h2>
+    <p>
+      Vous êtes une structure impliquée dans les enjeux de responsabilité sociale et environnementale et vous avez des ressources pour former à ces enjeux. Reboot! est une opportunité de mettre ces ressources à disposition d’un grand nombre d’étudiants. Cela peut-être un MOOC, un support de formation, un dispositif numérique, du mentorat de compétence, ou simplement du temps pour donner une conférence. Evidemment, tout est gratuit, et si les ressources sont Open Source ou Creative Commons, c’est encore mieux.
+    </p>
+    <a href="/qui-sommes-nous">Contactez l'équipe par ici</a>
+  </div>
+</div>
+
+<div class="row mt-5">
   {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'gold' %}
   {% for partner in validated_partners %}
     <div class="col-md-3 mt-4">
@@ -17,7 +25,7 @@ description: Découvrez les partenaires “gold” et “silver”, qui mettent 
   {% endfor %}
 </div>
 
-<h2 class="mt-5">Partenaires “silver”</h2>
+<h2 class="mt-5 category">Tous les partenaires</h2>
 
 <div class="row">
   {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'silver'  %}

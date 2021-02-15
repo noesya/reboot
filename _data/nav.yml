@@ -1,8 +1,10 @@
 - title: Accueil
   slug: /
-- title: Partenaires
-  slug: /partenaires
+- title: Étudiants
+  slug: /etudiants
 - title: Écoles
   slug: /ecoles
+- title: Partenaires
+  slug: /partenaires
 # - title: Événements
 #   slug: /evenements
