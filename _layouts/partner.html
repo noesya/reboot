@@ -24,7 +24,8 @@ layout: with-nav
 </div>
 
 {% if page.resources.size > 0 %}
-  <h2 class="mt-5">Ressources mises à disposition</h2>
+  <h2 class="category mt-5">Ressources</h2>
+  <p>Les ressources ci-dessous sont mises à la disposition des écoles par "{{ page.title }}".</p>
   {% for resource in page.resources %}
     <div class="row mt-4">
       <div class="col-md-3 mt-4">
