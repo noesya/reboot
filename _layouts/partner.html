@@ -6,14 +6,20 @@ layout: with-nav
   <div class="col-md-3">
     <img src="/assets/images/partners/{{ page.slug }}.png" alt="{{ page.title }}" class="img-fluid mb-4" width="672" height="672">
   </div>
-  <div class="offset-md-1 col-md-6">
+  <div class="offset-md-1 col-md-8 offset-xl-1 col-xl-5">
+    <h2 class="category">Présentation</h2>
     <p class="lead">{{ page.description }}</p>
-
-    {% if page.site %}
-      <p><a href="{{ page.site }}" target="_blank" rel="noreferrer">{{ page.site }}</a></p>
-    {% endif %}
-
     {{ content }}
+  </div>
+  <div class="offset-md-4 col-md-5 offset-xl-1 col-xl-2">
+    {% if page.site %}
+      <h2 class="category">Site</h2>
+      <p class="mb-5"><a href="{{ page.site }}" target="_blank" rel="noreferrer">{{ page.site }}</a></p>
+    {% endif %}
+    {% if page.contact %}
+      <h2 class="category">Contact</h2>
+      <p>{{ page.contact }}</p>
+    {% endif %}
   </div>
 </div>
 
@@ -21,17 +27,17 @@ layout: with-nav
   <h2 class="mt-5">Ressources mises à disposition</h2>
   {% for resource in page.resources %}
     <div class="row mt-4">
-      <div class="col-md-6 mt-4">
-        <h3 class="h5"><b>{{ resource.title }}</b></h3>
-        <p>{{ resource.description }}</p>
-        <a href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.url }}</a>
-      </div>
-      <div class="offset-md-2 col-md-4 mt-4">
+      <div class="col-md-3 mt-4">
         {% if resource.image %}
           <a href="{{ resource.url }}" target="_blank" rel="noreferrer">
             <img src="/assets/images/partners/{{ page.slug }}/{{ resource.image }}" alt="{{ resource.title }}" class="img-fluid img-thumbnail">
           </a>
         {% endif %}
+      </div>
+      <div class="offset-md-1 col-md-7 mt-4">
+        <h3 class="h5"><b>{{ resource.title }}</b></h3>
+        <p>{{ resource.description }}</p>
+        <a href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.url }}</a>
       </div>
     </div>
     <hr class="mt-5">
