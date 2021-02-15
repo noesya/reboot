@@ -3,14 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ page.description | strip_html}}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}">
-    <meta property="og:image" content="{{ site.url }}/assets/images/share.jpg">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}">
-    <meta name="twitter:image" content="{{ site.url }}/assets/images/share.jpg">
+
+    <!-- HTML Meta Tags -->
     <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="description" content="{{ page.description }}">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}" />
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/share.jpg">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/share.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="reboot2021.org">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+
+    <!-- Icons -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
     {{ content }}
@@ -20,7 +37,7 @@
           <img src="/assets/images/reboot.svg" alt="Reboot!" height="30px">
           <p class="mt-4">Pour suivre l'actualité, inscrivez-vous à la newsletter</p>
         </div>
-        <iframe src="https://rebootorg.substack.com/embed" width="100%" height="100" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://rebootorg.substack.com/embed" width="100%" height="100" title="Newsletter"></iframe>
         <hr class="mt-5">
         <div id="wcb" class="carbonbadge mt-5"></div>
         <hr class="mt-5">

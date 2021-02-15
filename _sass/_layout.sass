@@ -33,7 +33,10 @@ hr
 footer
   margin-top: 100px
   background: rgba(29, 95, 124, 0.05)
+  a
+    color: darken($primary, 20)
   iframe
+    border: none
     mix-blend-mode: multiply
 
 a
@@ -53,3 +56,19 @@ a
       background-size: contain
       display: inline-block
       vertical-align: -0.1rem
+
+.breadcrumb
+  display: block
+  white-space: nowrap
+  overflow-x: auto
+  -ms-overflow-style: none
+  scrollbar-width: none
+  .breadcrumb-item.active
+    color: #505254
+  &::-webkit-scrollbar
+    display: none
+  li
+    display: inline-block
+    a
+      overflow-wrap: anywhere
+      text-decoration: none
