@@ -1,5 +1,13 @@
 <ul class="navbar-nav">
   {% for item in site.data.nav %}
-    <li class="nav-item"><a class="nav-link" href="{{ item.slug }}">{{ item.title }}</a></li>
+    {% assign class = nil %}
+    {% if page.url == '/' and item.slug == '/' %}
+      {% assign class = ' active' %}
+    {% else %}
+      {% if item.slug != '/' and (page.url == item.slug or page.url contains item.slug) %}
+        {% assign class = ' active' %}
+      {% endif %}
+    {% endif %}
+    <li class="nav-item"><a class="nav-link{{ class }}" href="{{ item.slug }}">{{ item.title }}</a></li>
   {% endfor %}
 </ul>

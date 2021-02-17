@@ -8,7 +8,7 @@ layout: with-nav
   </div>
   <div class="offset-md-1 col-md-8 offset-xl-1 col-xl-5">
     <h2 class="category">Présentation</h2>
-    <p class="lead">{{ page.description }}</p>
+    <p class="lead">{{ page.description | correct_punctuation  }}</p>
     {{ content }}
   </div>
   <div class="offset-md-4 col-md-5 offset-xl-1 col-xl-2">
@@ -18,7 +18,7 @@ layout: with-nav
     {% endif %}
     {% if page.contact %}
       <h2 class="category">Contact</h2>
-      <p>{{ page.contact }}</p>
+      <p>{{ page.contact | correct_punctuation  }}</p>
     {% endif %}
   </div>
 </div>
@@ -36,8 +36,8 @@ layout: with-nav
         {% endif %}
       </div>
       <div class="offset-md-1 col-md-7 mt-4">
-        <h3 class="h5"><b>{{ resource.title }}</b></h3>
-        <p>{{ resource.description }}</p>
+        <h3 class="h5"><b>{{ resource.title | correct_punctuation  }}</b></h3>
+        <p>{{ resource.description | correct_punctuation }}</p>
         <a href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.url }}</a>
       </div>
     </div>
