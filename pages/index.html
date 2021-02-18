@@ -3,26 +3,8 @@ layout: default
 description: "Les étudiant·e·s en communication mettent à jour le système. Communication, publicité, relations presse, relations publiques, influence, numérique..."
 permalink: /
 ---
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
-  <div class="container">
-    <div></div>
-
-    <button class="navbar-toggler collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse justify-content-md-end collapse" id="navbar">
-      {% include nav.html %}
-    </div>
-  </div>
-</nav>
-
 <header>
-  <div>
-    <h1>
-      <img src="/assets/images/reboot-blanc.svg" alt="Reboot!" width="300" />
-    </h1>
-  </div>
-  <h2>Les étudiant·e·s en communication mettent à jour le système</h2>
+  <h2>2 jours pour hacker la com</h2>
   <p>
     Communication •
     Publicité •
@@ -33,31 +15,18 @@ permalink: /
   </p>
 </header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-5">
-      <h3 class="text-md-end">
-        Jeudi 30 septembre & <br>
-        vendredi 1er octobre 2021
-      </h3>
-    </div>
-    <div class="col-md-7 col-lg-6">
-      <p class="lead">{{ site.data.texts.index.chapo | correct_punctuation }}</p>
-      <p>{{ site.data.texts.index.text | correct_punctuation }}</p>
-    </div>
-  </div>
-</div>
+<h3>Jeudi 30 septembre & vendredi 1er octobre 2021</h3>
+<p class="lead">{{ site.data.texts.index.chapo | correct_punctuation }}</p>
+<p>{{ site.data.texts.index.text | correct_punctuation }}</p>
 
-<div class="container mt-5">
-  <h2 class="category">Un événement soutenu par...</h2>
-  <div class="row">
-    {% assign validated_partners = site.partners | where: 'level', 'gold' | where: 'validated', true %}
-    {% for partner in validated_partners %}
-      <div class="col-md-3 col-6 mt-4">
-        <a href="{{ partner.url }}">
-          <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid" width="500">
-        </a>
-      </div>
-    {% endfor %}
-  </div>
+<h2 class="category mt-5">Un événement soutenu par...</h2>
+<div class="row">
+  {% assign validated_partners = site.partners | where: 'level', 'gold' | where: 'validated', true %}
+  {% for partner in validated_partners %}
+    <div class="col-md-3 col-6 mt-4">
+      <a href="{{ partner.url }}">
+        <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid" width="500">
+      </a>
+    </div>
+  {% endfor %}
 </div>

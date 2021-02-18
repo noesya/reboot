@@ -31,25 +31,26 @@
     <link rel="preload" href="/assets/fonts/AesteticoInformal-Bold/font.woff2" as="font" crossorigin="anonymous" />
     <link rel="preload" href="/assets/fonts/AesteticoInformal-ExtraLight/font.woff2" as="font" crossorigin="anonymous" />
   </head>
-  <body>
-    {{ content }}
-    <footer class="pb-5 pt-5">
-      <div class="container text-center">
-        <div class="text-center">
-          <img src="/assets/images/reboot.svg" alt="Reboot!" height="30px">
-          <p class="mt-4">Pour suivre l'actualité, inscrivez-vous à la newsletter</p>
+  <body class="bg-dark text-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="/assets/images/reboot.svg" alt="Reboot!" height="20" /></a>
+        <button class="navbar-toggler collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse justify-content-md-end collapse" id="navbar" style="">
+          {% include nav.html %}
         </div>
-        <iframe src="https://rebootorg.substack.com/embed" width="100%" height="100" title="Newsletter" loading="lazy"></iframe>
-        <hr class="mt-5">
-        <div id="wcb" class="carbonbadge mt-5"></div>
-        <hr class="mt-5">
-        <ul class="list-inline mt-5">
-          <li class="list-inline-item"><a href="/mentions-legales">Mentions légales</a></li>
-        </ul>
       </div>
-    </footer>
+    </nav>
+    <div class="container">
+      {% include breadcrumb.html %}
+      <h1 class="mt-5 mb-5">{{ page.title }}</h1>
+      {{ content }}
+      {% include footer.html %}
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
-    <script src="https://unpkg.com/website-carbon-badges@1.1.1/b.min.js" async defer></script>
   </body>
 </html>
