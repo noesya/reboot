@@ -19,21 +19,22 @@ layout: default
   {% if page.resources.size > 0 %}
     <h2 class="category mt-5">Ressources mises à la disposition des écoles par "{{ page.title }}"</h2>
     {% for resource in page.resources %}
-      <div class="row mt-4">
-        <div class="col-md-3 mt-4">
+      <div class="resource">
+        <div class="resource__image">
           {% if resource.image %}
             <a href="{{ resource.url }}" target="_blank" rel="noreferrer">
-              <img src="/assets/images/partners/{{ page.slug }}/{{ resource.image }}" alt="{{ resource.title }}" class="img-fluid img-thumbnail">
+              <img src="/assets/images/partners/{{ page.slug }}/{{ resource.image }}" alt="{{ resource.title }}">
             </a>
           {% endif %}
         </div>
-        <div class="offset-md-1 col-md-7 mt-4">
-          <h3 class="h5"><b>{{ resource.title | correct_punctuation  }}</b></h3>
+        <div class="resource__texts">
+          <h3>{{ resource.title | correct_punctuation  }}</h3>
           <p>{{ resource.description | correct_punctuation }}</p>
-          <a href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.url }}</a>
+          {% if resource.url %}
+            <p><a href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.url }}</a></p>
+          {% endif %}
         </div>
       </div>
-      <hr class="mt-5">
     {% endfor %}
   {% endif %}
 </div>

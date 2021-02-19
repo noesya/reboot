@@ -7,3 +7,25 @@
     @media (max-width: 768px)
       float: none
       margin: 0
+  .resource
+    max-width: $width
+    margin-bottom: 60px
+    display: grid
+    grid-gap: 30px
+    grid-template-columns: 1fr 2fr
+    @media (max-width: 768px)
+      display: block
+    &__image
+      img
+        border: 1px solid $transparent_grey
+        border-radius: 3px
+        padding: 3px
+    &__texts
+      h3
+        font-size: 1.5rem
+        line-height: 2rem
+        font-weight: bold
+        margin-bottom: 15px
+      p
+        font-size: 1.2rem
+        line-height: 1.6rem
