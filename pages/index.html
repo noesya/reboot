@@ -3,18 +3,18 @@ layout: default
 description: "2 jours pour hacker les métiers de la communication ! Communication, publicité, relations presse, relations publiques, influence, numérique..."
 permalink: /
 ---
-
-<p class="chapo">{{ site.data.texts.index.chapo | correct_punctuation }}</p>
-<p>{{ site.data.texts.index.text | correct_punctuation }}</p>
-
-<h2 class="category">Un événement soutenu par...</h2>
-<section class="grid grid__large">
-  {% assign validated_partners = site.partners | where: 'level', 'gold' | where: 'validated', true %}
-  {% for partner in validated_partners %}
-  <article>
-    <a href="{{ partner.url }}">
-      <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid" width="500">
-    </a>
-  </article>
-  {% endfor %}
-</section>
+<div class="index">
+  <p class="chapo">{{ site.data.texts.index.chapo | correct_punctuation }}</p>
+  <p>{{ site.data.texts.index.text | correct_punctuation }}</p>
+  <h2 class="category">Un événement soutenu par...</h2>
+  <section class="grid grid__large">
+    {% assign validated_partners = site.partners | where: 'level', 'gold' | where: 'validated', true %}
+    {% for partner in validated_partners %}
+    <article>
+      <a href="{{ partner.url }}">
+        <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid" width="500">
+      </a>
+    </article>
+    {% endfor %}
+  </section>
+</div>
