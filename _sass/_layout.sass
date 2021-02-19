@@ -2,9 +2,14 @@ $color: #FF0000
 $width: 1140px
 $transparent_grey: rgba(125, 125, 125, 0.2)
 
+html
+  background: white
+  @media (prefers-color-scheme: dark)
+    background: black
+    color: white
+
 body
   padding: 30px
-  isolation: isolate
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
   font-family: 'Aestetico Formal', sans-serif
@@ -70,8 +75,3 @@ a
       vertical-align: -0.1rem
       @media (prefers-color-scheme: dark)
         filter: invert(1)
-
-
-@media (prefers-color-scheme: dark)
-  background: black
-  color: white
