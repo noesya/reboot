@@ -1,49 +1,28 @@
-.navbar
-  &.navbar-light .navbar-nav .nav-link
-    color: black
-  a
-    font-weight: bold
-    text-transform: uppercase
-    letter-spacing: 1px
-header
-  margin-bottom: 40px
-  div
-    background-color: $primary
-    background-image: url('../images/background.jpg')
-    background-size: cover
-    background-position: bottom
-    text-align: center
-    padding-top: 300px
-    padding-bottom: 20px
-  p, h2
-    padding: 20px
-    margin: 0
-    text-align: center
-  p
-    text-transform: uppercase
-    font-size: 12px
-  h2
-    padding-bottom: 0
+$color: #1d5f7c
 
-h3
-  font-weight: bold
+body
+  padding: 30px
 
-h2.category
-  text-transform: uppercase
-  letter-spacing: 2px
-  font-size: 0.8rem
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  font-family: 'Aestetico Formal', sans-serif
 
-hr
-  background-color: #1d5f7c
-
-footer
-  margin-top: 100px
-  background: rgba(29, 95, 124, 0.05)
-  a
-    color: darken($primary, 20)
-  iframe
-    border: none
-    mix-blend-mode: multiply
+// h1
+//   font-size: 5rem
+//
+// h2
+//   font-size: 4rem
+//
+//
+// h3
+//   font-weight: bold
+//
+// h2.category
+//   text-transform: uppercase
+//   letter-spacing: 2px
+//   font-size: 0.8rem
+//
+// hr
+//   background-color: #1d5f7c
 
 a
   transition: text-decoration 0.5s
@@ -63,21 +42,7 @@ a
       display: inline-block
       vertical-align: -0.1rem
 
-.breadcrumb
-  display: block
-  white-space: nowrap
-  overflow-x: auto
-  -ms-overflow-style: none
-  scrollbar-width: none
-  .breadcrumb-item.active
-    color: #505254
-  &::-webkit-scrollbar
-    display: none
-  li
-    display: inline-block
-    a
-      overflow-wrap: anywhere
-      text-decoration: none
 
-.navbar .navbar-nav .nav-link.active
-  color: $primary
+@media (prefers-color-scheme: dark)
+  background: black
+  color: white

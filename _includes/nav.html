@@ -1,13 +1,16 @@
-<ul class="navbar-nav">
-  {% for item in site.data.nav %}
-    {% assign class = nil %}
-    {% if page.url == '/' and item.slug == '/' %}
-      {% assign class = ' active' %}
-    {% else %}
-      {% if item.slug != '/' and (page.url == item.slug or page.url contains item.slug) %}
+<nav>
+  <a class="logo" href="/"><img src="/assets/images/reboot.svg" alt="Reboot!" height="20" /></a>
+  <ul>
+    {% for item in site.data.nav %}
+      {% assign class = nil %}
+      {% if page.url == '/' and item.slug == '/' %}
         {% assign class = ' active' %}
+      {% else %}
+        {% if item.slug != '/' and (page.url == item.slug or page.url contains item.slug) %}
+          {% assign class = ' active' %}
+        {% endif %}
       {% endif %}
-    {% endif %}
-    <li class="nav-item"><a class="nav-link{{ class }}" href="{{ item.slug }}">{{ item.title }}</a></li>
-  {% endfor %}
-</ul>
+      <li><a class="{{ class }}" href="{{ item.slug }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
