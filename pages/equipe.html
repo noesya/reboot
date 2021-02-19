@@ -3,14 +3,14 @@ title: Équipe
 permalink: /equipe
 ---
 
-<p>{{ site.data.texts.equipe.text | correct_punctuation }}</p>
+<p class="chapo">{{ site.data.texts.equipe.chapo | correct_punctuation }}</p>
 
-<div class="row">
+<section class="grid grid__small">
   {% for person in site.data.team %}
-    <div class="col-md-2 mt-5">
-      <img src="/assets/images/team/{{ person.image }}" alt="{{ person.first_name }} {{ person.last_name }}" class="img-fluid" width="500">
-      <h3 class="h4 mt-3">{{ person.first_name }} {{ person.last_name }}</h3>
-      <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer" class="btn btn-sm btn-light">LinkedIn</a>
-    </div>
+    <article>
+      <img src="/assets/images/team/{{ person.image }}" alt="{{ person.first_name }} {{ person.last_name }}" width="500">
+      <h2 class="h4 mt-3">{{ person.first_name }} {{ person.last_name }}</h2>
+      <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
+    </article>
   {% endfor %}
-</div>
+</section>

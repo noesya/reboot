@@ -3,21 +3,16 @@ title: Écoles
 permalink: /ecoles
 ---
 
-<div class="row">
-  <div class="offset-md-4 col-md-8 col-xl-6">
-    <h2 class="h3">{{ site.data.texts.ecoles.title | correct_punctuation }}</h2>
-    <p>{{ site.data.texts.ecoles.text | correct_punctuation }}</p>
-    <a href="/qui-sommes-nous">Contactez l'équipe par ici</a>
-  </div>
-</div>
-
-<div class="row mt-5">
+<p class="chapo">{{ site.data.texts.ecoles.chapo | correct_punctuation }}</p>
+<p>{{ site.data.texts.ecoles.text | correct_punctuation }}</p>
+<h2 class="category">Écoles participantes</h2>
+<section class="grid grid__small">
   {% for school in site.schools %}
-    <div class="col-md-2 col-6 mt-4">
+    <article>
       <a href="{{ school.url }}">
         <img src="/assets/images/schools/{{ school.slug }}.png" alt="{{ school.title }}" class="img-fluid">
       </a>
-      <h2 class="h6 mt-2"><a href="{{ school.url }}">{{ school.title }}</a></h2>
-    </div>
+      <h2><a href="{{ school.url }}">{{ school.title }}</a></h2>
+    </article>
   {% endfor %}
-</div>
+</section>

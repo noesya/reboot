@@ -1,16 +1,20 @@
 <nav>
-  <a class="logo" href="/"><img src="/assets/images/reboot.svg" alt="Reboot!" height="20" /></a>
-  <ul>
-    {% for item in site.data.nav %}
+  <a class="logo" href="/"><img src="/assets/images/reboot.svg" alt="Reboot!" width="100" /></a>
+  <a href="#menu" class="mobile_button mobile_button__open">Menu</a>
+  <div id="menu">
+    <a href="#" class="mobile_button mobile_button__close">Fermer</a>
+    <ul>
+      {% for item in site.data.nav %}
       {% assign class = nil %}
       {% if page.url == '/' and item.slug == '/' %}
-        {% assign class = ' active' %}
+      {% assign class = ' active' %}
       {% else %}
-        {% if item.slug != '/' and (page.url == item.slug or page.url contains item.slug) %}
-          {% assign class = ' active' %}
-        {% endif %}
+      {% if item.slug != '/' and (page.url == item.slug or page.url contains item.slug) %}
+      {% assign class = ' active' %}
+      {% endif %}
       {% endif %}
       <li><a class="{{ class }}" href="{{ item.slug }}">{{ item.title }}</a></li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
+  </div>
 </nav>

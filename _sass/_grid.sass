@@ -1,0 +1,15 @@
+.grid
+  display: grid
+  grid-gap: 30px
+  &__large
+    grid-template-columns: repeat(4, 1fr)
+    @media(max-width: 768px)
+      grid-template-columns: 1fr
+  &__small
+    grid-template-columns: repeat(6, 1fr)
+    @media(max-width: 768px)
+      grid-template-columns: repeat(2, 1fr)
+  h2, h3
+    margin-top: 15px
+    a
+      line-height: 1.5rem

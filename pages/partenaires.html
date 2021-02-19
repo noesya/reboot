@@ -4,36 +4,32 @@ description: Découvrez les partenaires “gold” et “silver”, qui mettent 
 permalink: /partenaires
 ---
 
-<div class="row">
-  <div class="offset-md-4 col-md-8 col-xl-6">
-    <h2 class="h3">{{ site.data.texts.partenaires.title | correct_punctuation }}</h2>
-    <p>{{ site.data.texts.partenaires.text | correct_punctuation }}</p>
-    <a href="/qui-sommes-nous">Contactez l'équipe par ici</a>
-  </div>
-</div>
+<p class="chapo">{{ site.data.texts.partenaires.chapo | correct_punctuation }}</p>
 
-<div class="row mt-5">
+
+<h2 class="category">Un événement soutenu par...</h2>
+
+<section class="grid grid__large">
   {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'gold' %}
   {% for partner in validated_partners %}
-    <div class="col-md-3 mt-4">
+    <article>
       <a href="{{ partner.url }}">
         <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid">
       </a>
-      <h2 class="h6 mt-2"><a href="{{ partner.url }}">{{ partner.title }}</a></h2>
-    </div>
+      <h2><a href="{{ partner.url }}">{{ partner.title }}</a></h2>
+    </article>
   {% endfor %}
-</div>
+</section>
 
-<h2 class="mt-5 category">Tous les partenaires</h2>
-
-<div class="row">
+<h2 class="category">Tous les partenaires</h2>
+<section class="grid grid__small">
   {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'silver'  %}
   {% for partner in validated_partners %}
-    <div class="col-md-2 col-6 mt-4">
+    <article>
       <a href="{{ partner.url }}">
         <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid">
       </a>
-      <h2 class="h6 mt-2"><a href="{{ partner.url }}">{{ partner.title }}</a></h2>
-    </div>
+      <h3><a href="{{ partner.url }}">{{ partner.title }}</a></h3>
+    </article>
   {% endfor %}
-</div>
+</section>
