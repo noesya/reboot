@@ -5,6 +5,8 @@ permalink: /equipe
 
 <p class="chapo">{{ site.data.texts.equipe.chapo | correct_punctuation }}</p>
 
+<h2 class="category">L'équipe</h2>
+
 <section class="grid grid__small">
   {% for person in site.data.team %}
     <article>
@@ -13,4 +15,9 @@ permalink: /equipe
       <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
     </article>
   {% endfor %}
+  <article>
+    <img src="/assets/images/team/vous.jpg" alt="Vous ?" width="500">
+    <h2 class="h4 mt-3">Vous ?</h2>
+    <a href="mailto:equipe@reboot2021.org" target="_blank" rel="noreferrer">equipe@reboot2021.org</a>
+  </article>
 </section>

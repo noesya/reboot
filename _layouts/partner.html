@@ -2,30 +2,21 @@
 layout: default
 ---
 
-<div class="row">
-  <div class="col-md-3">
-    <img src="/assets/images/partners/{{ page.slug }}.png" alt="{{ page.title }}" class="img-fluid mb-4" width="672" height="672">
-  </div>
-  <div class="offset-md-1 col-md-8 offset-xl-1 col-xl-5">
-    <h2 class="category">Présentation</h2>
-    <p class="lead">{{ page.description | correct_punctuation  }}</p>
-    {{ content }}
-  </div>
-  <div class="offset-md-4 col-md-5 offset-xl-1 col-xl-2">
-    {% if page.site %}
-      <h2 class="category">Site</h2>
-      <p class="mb-5"><a href="{{ page.site }}" target="_blank" rel="noreferrer">{{ page.site }}</a></p>
-    {% endif %}
-    {% if page.contact %}
-      <h2 class="category">Contact</h2>
-      <p>{{ page.contact | correct_punctuation  }}</p>
-    {% endif %}
-  </div>
-</div>
+<img src="/assets/images/partners/{{ page.slug }}.png" alt="{{ page.title }}" class="partner__logo" width="672" height="672">
+
+<p class="chapo">{{ page.description | correct_punctuation  }}</p>
+
+{% if page.site %}
+  <h2 class="category">Site</h2>
+  <p class="mb-5"><a href="{{ page.site }}" target="_blank" rel="noreferrer">{{ page.site }}</a></p>
+{% endif %}
+{% if page.contact %}
+  <h2 class="category">Contact</h2>
+  <p>{{ page.contact | correct_punctuation  }}</p>
+{% endif %}
 
 {% if page.resources.size > 0 %}
-  <h2 class="category mt-5">Ressources</h2>
-  <p>Les ressources ci-dessous sont mises à la disposition des écoles par "{{ page.title }}".</p>
+  <h2 class="category mt-5">Ressources mises à la disposition des écoles par "{{ page.title }}"</h2>
   {% for resource in page.resources %}
     <div class="row mt-4">
       <div class="col-md-3 mt-4">
