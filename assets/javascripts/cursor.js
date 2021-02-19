@@ -1,5 +1,6 @@
+document.body.style.cursor = 'none';
 const div = document.createElement('div');
-div.className = 'cursor'
+div.className = 'cursor';
 const cursor = document.querySelector('.cursor');
 
 let mouseX = 126;
