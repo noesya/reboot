@@ -10,13 +10,13 @@ permalink: /equipe
 <section class="grid grid__small">
   {% for person in site.data.team %}
     <article>
-      <img src="/assets/images/team/{{ person.image }}" alt="{{ person.first_name }} {{ person.last_name }}" width="500">
+      <img src="/assets/images/team/{{ person.image }}" alt="{{ person.first_name }} {{ person.last_name }}" class="team__photo" width="500">
       <h2 class="h4 mt-3">{{ person.first_name }} {{ person.last_name }}</h2>
       <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
     </article>
   {% endfor %}
   <article>
-    <img src="/assets/images/team/vous.jpg" alt="Vous ?" width="500">
+    <img src="/assets/images/team/vous.jpg" alt="Vous ?" class="team__photo" width="500">
     <h2 class="h4 mt-3">Vous ?</h2>
     <a href="mailto:equipe@reboot2021.org" target="_blank" rel="noreferrer">equipe@reboot2021.org</a>
   </article>
