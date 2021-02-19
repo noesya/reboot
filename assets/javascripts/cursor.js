@@ -2,13 +2,13 @@ const div = document.createElement('div');
 div.className = 'cursor'
 const cursor = document.querySelector('.cursor');
 
-let mouseX = 0;
-let mouseY = 0;
+let mouseX = 126;
+let mouseY = 46;
 
-let cursorX = 0;
-let cursorY = 0;
+let cursorX = mouseX;
+let cursorY = mouseY;
 
-let size = 32;
+let size = 8;
 
 let speed = 0.2;
 
@@ -25,6 +25,8 @@ function animate() {
     cursor.style.top = cursorY + 'px';
     cursor.style.width = size + 'px';
     cursor.style.height = size + 'px';
+    cursor.style.marginLeft = (-size/2) + 'px';
+    cursor.style.marginTop = (-size/2) + 'px';
 
     requestAnimationFrame(animate);
 }
