@@ -8,7 +8,6 @@ permalink: /
 <p>{{ site.data.texts.index.text | correct_punctuation }}</p>
 
 <h2 class="category">Un événement soutenu par...</h2>
-
 <section class="grid grid__large">
   {% assign validated_partners = site.partners | where: 'level', 'gold' | where: 'validated', true %}
   {% for partner in validated_partners %}
