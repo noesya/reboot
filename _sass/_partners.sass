@@ -1,5 +1,7 @@
 .partner
   min-height: 400px
+  @media (max-width: 768px)
+    margin-top: 30px
   &__logo
     float: left
     width: 300px
@@ -7,6 +9,8 @@
     @media (max-width: 768px)
       float: none
       margin: 0
+  &__site
+    @include small-text
   .resource
     max-width: $width
     margin-bottom: 60px
@@ -27,5 +31,7 @@
         font-weight: bold
         margin-bottom: 15px
       p
-        font-size: 1.2rem
-        line-height: 1.6rem
+        @include small-text
+    &__link
+      a
+        @include very-small-text

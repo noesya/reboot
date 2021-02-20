@@ -9,7 +9,9 @@ layout: default
 
   {% if page.site %}
     <h2 class="category">Site</h2>
-    <p class="mb-5"><a href="{{ page.site }}" target="_blank" rel="noreferrer">{{ page.site }}</a></p>
+    <p class="partner__site">
+      <a href="{{ page.site }}" target="_blank" rel="noreferrer">{{ page.site }}</a>
+    </p>
   {% endif %}
   {% if page.contact %}
     <h2 class="category">Contact</h2>
@@ -17,7 +19,7 @@ layout: default
   {% endif %}
 
   {% if page.resources.size > 0 %}
-    <h2 class="category mt-5">Ressources mises à la disposition des écoles par "{{ page.title }}"</h2>
+    <h2 class="category">Ressources mises à la disposition des écoles par "{{ page.title }}"</h2>
     {% for resource in page.resources %}
       <div class="resource">
         <div class="resource__image">
@@ -31,7 +33,9 @@ layout: default
           <h3>{{ resource.title | correct_punctuation  }}</h3>
           <p>{{ resource.description | correct_punctuation }}</p>
           {% if resource.url %}
-            <p><a href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.url }}</a></p>
+            <p class="resource__link">
+              <a href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.url }}</a>
+            </p>
           {% endif %}
         </div>
       </div>
