@@ -3,21 +3,23 @@ title: Équipe
 permalink: /equipe
 ---
 
-<p class="chapo">{{ site.data.texts.equipe.chapo | correct_punctuation }}</p>
+<div class="team">
+  <p class="chapo">{{ site.data.texts.equipe.chapo | correct_punctuation }}</p>
 
-<h2 class="category">L'équipe</h2>
+  <h2 class="category">L'équipe</h2>
 
-<section class="grid grid__small">
-  {% for person in site.data.team %}
+  <section class="grid grid__small">
+    {% for person in site.data.team %}
+      <article>
+        <img src="/assets/images/team/{{ person.image }}" alt="{{ person.first_name }} {{ person.last_name }}" class="team__photo" width="500">
+        <h2>{{ person.first_name }} {{ person.last_name }}</h2>
+        <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer" class="team__contact">LinkedIn</a>
+      </article>
+    {% endfor %}
     <article>
-      <img src="/assets/images/team/{{ person.image }}" alt="{{ person.first_name }} {{ person.last_name }}" class="team__photo" width="500">
-      <h2 class="h4 mt-3">{{ person.first_name }} {{ person.last_name }}</h2>
-      <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
+      <img src="/assets/images/team/vous.jpg" alt="Vous ?" class="team__photo" width="500">
+      <h2>Vous ?</h2>
+      <a href="mailto:equipe@reboot2021.org" target="_blank" rel="noreferrer" class="team__contact">Ecrivez-nous&nbsp;!</a>
     </article>
-  {% endfor %}
-  <article>
-    <img src="/assets/images/team/vous.jpg" alt="Vous ?" class="team__photo" width="500">
-    <h2 class="h4 mt-3">Vous ?</h2>
-    <a href="mailto:equipe@reboot2021.org" target="_blank" rel="noreferrer">equipe@reboot2021.org</a>
-  </article>
-</section>
+  </section>
+</div>
