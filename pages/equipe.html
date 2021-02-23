@@ -8,7 +8,7 @@ permalink: /equipe
   <p>{{ site.data.texts.equipe.text | correct_punctuation }}</p>
 
   <h2 class="category">L'équipe</h2>
-  <section class="grid grid__small">
+  <section class="grid grid--small">
     {% for person in site.data.team %}
       <article>
         <img src="/assets/images/team/{{ person.image }}" alt="{{ person.first_name }} {{ person.last_name }}" class="team__photo" width="500">

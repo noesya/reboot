@@ -6,7 +6,7 @@ permalink: /ecoles
 <p class="chapo">{{ site.data.texts.ecoles.chapo | correct_punctuation }}</p>
 <p>{{ site.data.texts.ecoles.text | correct_punctuation }}</p>
 <h2 class="category">Écoles participantes</h2>
-<section class="grid grid__small">
+<section class="grid grid--small">
   {% for school in site.schools %}
     <article>
       <a href="{{ school.url }}">
