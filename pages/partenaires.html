@@ -5,10 +5,9 @@ permalink: /partenaires
 ---
 
 <p class="chapo">{{ site.data.texts.partenaires.chapo | correct_punctuation }}</p>
-
+<p>{{ site.data.texts.partenaires.text | correct_punctuation }}</p>
 
 <h2 class="category">Un événement soutenu par...</h2>
-
 <section class="grid grid__large">
   {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'gold' %}
   {% for partner in validated_partners %}
