@@ -3,9 +3,11 @@ layout: default
 ---
 
 <div class="partner">
-  <img src="/assets/images/partners/{{ page.slug }}.png" alt="{{ page.title }}" class="partner__logo" width="672" height="672">
-
-  <p class="chapo">{{ page.description | correct_punctuation  }}</p>
+  <div>
+    <img src="/assets/images/partners/{{ page.slug }}.png" alt="{{ page.title }}" class="partner__logo" width="672" height="672">
+    <p class="chapo">{{ page.description | correct_punctuation  }}</p>
+  </div>
+  <p>{{ page.text | correct_punctuation  }}</p>
 
   {% if page.site %}
     <h2 class="category">Site</h2>
