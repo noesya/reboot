@@ -1,5 +1,7 @@
 - title: Accueil
   slug: /
+- title: Programme
+  slug: /programme
 - title: Étudiants
   slug: /etudiants
 - title: Écoles
@@ -8,5 +10,3 @@
   slug: /partenaires
 - title: Équipe
   slug: /equipe
-# - title: Événements
-#   slug: /evenements

@@ -35,4 +35,4 @@ collections:
     permalink: /partenaires/:name
   events:
     output: true
-    permalink: /evenements/:name
+    permalink: /programme/:name
