@@ -3,7 +3,9 @@
     <span class="event__kind">{{ include.event.kind }}</span>
   {% endif %}
   <h1 class="event__title">
-    {{ include.event.title }}
+    <a href="{{ include.event.url }}" class="event__link">
+      {{ include.event.title }}
+    </a>
   </h1>
   <div class="event__date">
     <span class="event__date__start">{{ include.event.start }}</span>
@@ -19,4 +21,5 @@
       </li>
     {% endfor %}
   </ul>
+  <a href="{{ include.event.url }}" class="event__link">En savoir plus</a>
 </article>

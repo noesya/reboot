@@ -2,4 +2,24 @@
 layout: default
 ---
 
-{{ content }}
+<article class="event">
+  {% if page.kind %}
+    <span class="event__kind">{{ page.kind }}</span>
+  {% endif %}
+  <p class="chapo"><b>{{ page.title }}</b></p>
+  <p>{{ page.description | correct_punctuation }}</p>
+  <div class="event__date">
+    <span class="event__date__start">{{ page.start }}</span>
+    <span class="event__date__end">{{ page.end }}</span>
+  </div>
+  <ul class="event__persons">
+    {% for person in page.people %}
+      <li class="event__person">
+        {{ person.name }}
+        {% if person.company %}
+          <span class="event__person__company">@ {{ person.company }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</article>
