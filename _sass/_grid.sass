@@ -1,6 +1,10 @@
 .grid
   display: grid
   grid-gap: 30px
+  &--extralarge
+    grid-template-columns: repeat(2, 1fr)
+    @media(max-width: 768px)
+      grid-template-columns: 1fr
   &--large
     grid-template-columns: repeat(4, 1fr)
     @media(max-width: 768px)

@@ -1,0 +1,22 @@
+<article class="event">
+  {% if include.event.kind %}
+    <span class="event__kind">{{ include.event.kind }}</span>
+  {% endif %}
+  <h1 class="event__title">
+    {{ include.event.title }}
+  </h1>
+  <div class="event__date">
+    <span class="event__date__start">{{ include.event.start }}</span>
+    <span class="event__date__end">{{ include.event.end }}</span>
+  </div>
+  <ul class="event__persons">
+    {% for person in include.event.people %}
+      <li class="event__person">
+        {{ person.name }}
+        {% if person.company %}
+          <span class="event__person__company">@ {{ person.company }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</article>

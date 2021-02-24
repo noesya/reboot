@@ -1,0 +1,19 @@
+<div class="events">
+  <h2 class="category">Programme</h2>
+  <div class="grid grid--extralarge">
+    <div class="events__day">
+      <h3>Jeudi  30 septembre</h3>
+      {% assign events = site.events | where: 'day', '2021-09-30' | sort: 'start' %}
+      {% for event in events %}
+        {% include event.html event=event %}
+      {% endfor %}
+    </div>
+    <div class="events__day">
+      <h3>Vendredi 1<sup>er</<sup> octobre</h3>
+      {% assign events = site.events | where: 'day', '2021-10-01' | sort: 'start' %}
+      {% for event in events %}
+        {% include event.html event=event %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
