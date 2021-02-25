@@ -49,19 +49,21 @@ $margin: 120px
     &__start::after
       content: ' - '
   &__persons
+    display: block
     @include small-text
     margin-left: $margin
     @media(max-width: 768px)
       margin-left: 0
   &__person
-    display: inline-block
+    display: inline
     margin-bottom: 5px
     &::after
-      content: ' / '
+      content: ' + '
     &:last-child::after
       content: ''
   &__link
     @include very-small-text
+    display: block
     font-weight: bold
     margin-left: $margin
     @media(max-width: 768px)
