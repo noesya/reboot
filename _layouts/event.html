@@ -10,8 +10,12 @@ layout: default
   <p>{{ page.description | correct_punctuation }}</p>
   <div class="event__date">
     <span class="event__date__day">{{ page.day }}</span><br>
-    <span class="event__date__start">{{ page.start }}</span>
-    <span class="event__date__end">{{ page.end }}</span>
+    {% if page.start %}
+      <span class="event__date__start">{{ page.start }}</span>
+    {% endif %}
+    {% if page.end %}
+      <span class="event__date__end">{{ page.end }}</span>
+    {% endif %}
   </div>
   <ul class="event__persons">
     {% for person in page.people %}

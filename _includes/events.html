@@ -3,7 +3,7 @@
   <p class="events__disclaimer">Attention, ce programme est sujet à modifications.</p>
   <div class="grid grid--extralarge">
     <div class="events__day">
-      <h3>Jeudi  30 septembre</h3>
+      <h3>Jeudi 30 septembre</h3>
       {% assign events = site.events | where: 'day', '30/09/2021' | sort: 'start' %}
       {% for event in events %}
         {% include event.html event=event %}
@@ -12,6 +12,13 @@
     <div class="events__day">
       <h3>Vendredi 1<sup>er</<sup> octobre</h3>
       {% assign events = site.events | where: 'day', '01/10/2021' | sort: 'start' %}
+      {% for event in events %}
+        {% include event.html event=event %}
+      {% endfor %}
+    </div>
+    <div class="events__day">
+      <h3>Du 1er au 23 octobre</h3>
+      {% assign events = site.events | where: 'day', '23/10/2021' | sort: 'start' %}
       {% for event in events %}
         {% include event.html event=event %}
       {% endfor %}
