@@ -8,11 +8,17 @@ collections:
     editor:
       preview: false
     files:
+      - label: 'Index'
+        name: 'index'
+        file: 'pages/index.html'
+        fields:
+          - { label: 'Chapo', name: 'chapo', widget: 'markdown', minimal: true, buttons: ['bold', 'link', 'bulleted-list'], editor_components: [], modes: ['rich_text'] }
+          - { label: 'Texte', name: 'text', widget: 'markdown', minimal: true, required: false, buttons: ['bold', 'link', 'bulleted-list'], editor_components: [], modes: [rich_text] }
       - label: 'Partenaires'
         name: 'partenaires'
         file: 'pages/partenaires.html'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Titre', name: 'title', widget: 'string' }
           - { label: 'Chapo', name: 'chapo', widget: 'markdown', minimal: true, buttons: ['bold', 'link', 'bulleted-list'], editor_components: [], modes: ['rich_text'] }
           - { label: 'Texte', name: 'text', widget: 'markdown', minimal: true, required: false, buttons: ['bold', 'link', 'bulleted-list'], editor_components: [], modes: [rich_text] }
   - name: 'partners'
