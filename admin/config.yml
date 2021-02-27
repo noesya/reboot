@@ -18,9 +18,18 @@ collections:
         widget: image
         media_folder: /assets/images/partners
         allow_multiple: false
-      - labe: Description
+      - labe: Chapo
         name: description
         widget: markdown
+        minimal: true
+        buttons: ['bold', 'link']
+        editor_components: []
+        modes:
+          - rich_text
+      - labe: Texte
+        name: text
+        widget: markdown
+        minimal: true
         buttons: ['bold', 'link']
         editor_components: []
         modes:
@@ -48,6 +57,7 @@ collections:
           - label: Image
             name: image
             widget: image
+            media_folder: /assets/images/resources
             allow_multiple: false
           - label: Description
             name: description

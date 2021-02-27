@@ -13,7 +13,7 @@ permalink: /partenaires
   {% for partner in validated_partners %}
     <article>
       <a href="{{ partner.url }}">
-        <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid">
+        <img src="{{ partner.cover }}" alt="{{ partner.title }}" class="img-fluid">
       </a>
       <h2><a href="{{ partner.url }}">{{ partner.title }}</a></h2>
     </article>
@@ -22,11 +22,11 @@ permalink: /partenaires
 
 <h2 class="category">Tous les partenaires</h2>
 <section class="grid grid--small">
-  {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'silver'  %}
+  {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'silver' %}
   {% for partner in validated_partners %}
     <article>
       <a href="{{ partner.url }}">
-        <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid">
+        <img src="{{ partner.cover }}" alt="{{ partner.title }}" class="img-fluid">
       </a>
       <h3><a href="{{ partner.url }}">{{ partner.title }}</a></h3>
     </article>
