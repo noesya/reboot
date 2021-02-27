@@ -14,8 +14,8 @@ text: Cela peut-être un MOOC, un support de formation, un dispositif numérique
   Creative Commons, c’est encore mieux. Contactez [l'équipe par ici !](/equipe).
 ---
 
-<p class="chapo">{{ site.data.texts.partenaires.chapo | correct_punctuation }}</p>
-<p>{{ site.data.texts.partenaires.text | correct_punctuation }}</p>
+<div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
+<div>{{ site.data.texts.partenaires.text | correct_punctuation }}</div>
 
 <h2 class="category">Un événement soutenu par...</h2>
 <section class="grid grid--large">

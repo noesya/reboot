@@ -3,6 +3,35 @@ backend:
   branch: main
 media_folder: 'assets/uploads'
 collections:
+  - name: 'pages'
+    label: 'Pages'
+    editor:
+      preview: false
+    files:
+      - label: 'Partenaires'
+        name: 'partenaires'
+        file: 'pages/partenaires.html'
+        fields:
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+          - label: 'Chapo'
+            name: 'chapo'
+            widget: 'markdown'
+            minimal: true
+            buttons: ['bold', 'link', 'bulleted-list']
+            editor_components: []
+            modes:
+              - rich_text
+          - label: 'Texte'
+            name: 'text'
+            widget: 'markdown'
+            minimal: true
+            required: false
+            buttons: ['bold', 'link', 'bulleted-list']
+            editor_components: []
+            modes:
+              - rich_text
   - name: 'partners'
     label: 'Partenaire'
     folder: '_partners/'
