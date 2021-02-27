@@ -10,14 +10,14 @@ chapo: "**Vous avez des ressources à partager ? Rejoignez les partenaires !**
   d’étudiant·e·s."
 text: >-
   Cela peut-être un MOOC, un support de formation, un dispositif numérique, du
-  mentorat de compétence, ou simplement du temps pour donner une conférence. 
+  mentorat de compétence, ou simplement du temps pour donner une conférence.
 
 
   Evidemment, tout est gratuit, et si les ressources sont Open Source ou Creative Commons, c’est encore mieux. Contactez [l'équipe par ici !](/equipe).
 ---
 
 <div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
-<div>{{ site.data.texts.partenaires.text | correct_punctuation }}</div>
+<div>{{ page.text | markdownify | correct_punctuation }}</div>
 
 <h2 class="category">Un événement soutenu par...</h2>
 <section class="grid grid--large">
