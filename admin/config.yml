@@ -6,5 +6,26 @@ collections:
   - name: 'partners'
     label: 'Partenaires'
     folder: '_partners/'
+    create: true
+    extension: html
+    editor:
+      preview: false
     fields:
-      - { name: Titre }
+      - label: Titre
+        name: title
+      - labe: Description
+        name: description
+        widget: markdown
+        modes:
+          - rich_text
+      - label: Partenaire
+        name: level
+        widget: select
+        options:
+          - label: Silver
+            value: silver
+          - label: Gold
+            value: gold
+      - label: Validé
+        name: validated
+        widget: boolean
