@@ -7,7 +7,7 @@ layout: default
     <img src="{{ page.cover }}" alt="{{ page.title }}" class="partner__logo" width="672" height="672">
     <div class="chapo">{{ page.description | markdownify | correct_punctuation  }}</div>
   </div>
-  <p>{{ page.text | correct_punctuation  }}</p>
+  <p>{{ page.text | markdownify | correct_punctuation  }}</p>
 
   {% if page.site %}
     <h2 class="category">Site</h2>
