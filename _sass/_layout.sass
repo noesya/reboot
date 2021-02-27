@@ -17,7 +17,7 @@ main > h1
   display: none
 
 b, strong
-  font-weight: bold
+  font-weight: bold !important
 
 p
   @include normal-text
@@ -26,7 +26,8 @@ p
 
 .chapo
   margin-top: 30px
-  @include large-text
+  &, *
+    @include large-text
 
 img
   max-width: 100%

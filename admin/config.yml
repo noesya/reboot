@@ -22,7 +22,7 @@ collections:
         name: description
         widget: markdown
         minimal: true
-        buttons: ['bold', 'link']
+        buttons: ['bold', 'link', 'bulleted-list']
         editor_components: []
         modes:
           - rich_text
@@ -31,7 +31,7 @@ collections:
         widget: markdown
         minimal: true
         required: false
-        buttons: ['bold', 'link']
+        buttons: ['bold', 'link', 'bulleted-list']
         editor_components: []
         modes:
           - rich_text
