@@ -4,8 +4,8 @@ layout: default
 
 <div class="partner">
   <div>
-    <img src="/assets/images/partners/{{ page.slug }}.png" alt="{{ page.title }}" class="partner__logo" width="672" height="672">
-    <p class="chapo">{{ page.description | correct_punctuation  }}</p>
+    <img src="{{ page.cover }}" alt="{{ page.title }}" class="partner__logo" width="672" height="672">
+    <div class="chapo">{{ page.description | markdownify | correct_punctuation  }}</div>
   </div>
   <p>{{ page.text | correct_punctuation  }}</p>
 

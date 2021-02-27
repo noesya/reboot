@@ -4,7 +4,7 @@ backend:
 media_folder: 'assets/uploads'
 collections:
   - name: 'partners'
-    label: 'Partenaires'
+    label: 'Partenaire'
     folder: '_partners/'
     create: true
     extension: html
@@ -13,19 +13,50 @@ collections:
     fields:
       - label: Titre
         name: title
+      - label: Image
+        name: cover
+        widget: image
+        media_folder: /assets/images/partners
+        allow_multiple: false
       - labe: Description
         name: description
         widget: markdown
+        buttons: ['bold', 'link']
+        editor_components: []
         modes:
           - rich_text
       - label: Partenaire
         name: level
         widget: select
-        options:
-          - label: Silver
-            value: silver
-          - label: Gold
-            value: gold
+        default: silver
+        options: ['silver', 'gold']
       - label: Validé
         name: validated
         widget: boolean
+        required: false
+      - label: Site
+        name: site
+        widget: string
+        required: false
+      - label: Ressources
+        name: resources
+        widget: list
+        fields:
+          - label: Titre
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+            allow_multiple: false
+          - label: Description
+            name: description
+            widget: markdown
+            minimal: true
+            buttons: ['bold', 'link']
+            editor_components: []
+            modes:
+              - rich_text
+          - label: URL
+            name: url
+            widget: string
