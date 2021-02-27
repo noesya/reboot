@@ -10,16 +10,20 @@ permalink: /equipe
   <h2 class="category">L'équipe</h2>
   <section class="grid grid--small">
     {% for person in site.data.team %}
+      {% assign name = person.first_name | append: ' ' | append: person.last_name %}
       <article>
-        <img src="/assets/images/team/{{ person.image }}" alt="{{ person.first_name }} {{ person.last_name }}" class="team__photo" width="500">
+        <img  src="/assets/images/people/{{ name | slugify: 'latin' }}.jpg"
+              alt="{{ person.name }}"
+              class="person__photo"
+              width="500">
         <h2>{{ person.first_name }} {{ person.last_name }}</h2>
-        <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer" class="team__contact">LinkedIn</a>
+        <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer" class="person__contact">LinkedIn</a>
       </article>
     {% endfor %}
     <article>
-      <img src="/assets/images/team/vous.jpg" alt="Vous ?" class="team__photo" width="500">
+      <img src="/assets/images/people/vous.jpg" alt="Vous ?" class="person__photo" width="500">
       <h2>Vous ?</h2>
-      <a href="mailto:equipe@reboot2021.org" target="_blank" rel="noreferrer" class="team__contact">Ecrivez-nous&nbsp;!</a>
+      <a href="mailto:equipe@reboot2021.org" target="_blank" rel="noreferrer" class="person__contact">Ecrivez-nous&nbsp;!</a>
     </article>
   </section>
 </div>

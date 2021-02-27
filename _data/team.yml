@@ -1,64 +1,51 @@
 - first_name: Mathieu
   last_name: Barre
-  image: mathieu-barre.jpg
   linkedin: https://www.linkedin.com/in/mathieu-barre/
 - first_name: Chloé
   last_name: Beghin
-  image: chloe-beghin.jpg
   linkedin: https://www.linkedin.com/in/chloebeghin/
+- first_name: Christophe
+  last_name: Clouzeau
+  linkedin: https://www.linkedin.com/in/christopheclouzeau/
 - first_name: Julien
   last_name: Dubois
-  image: julien-dubois.jpg
   linkedin: https://www.linkedin.com/in/julien-dubois-b1028b48/
 - first_name: Elodie
   last_name: Herisson
-  image: elodie-herisson.jpg
   linkedin: https://www.linkedin.com/in/%E2%98%85-elodie-herisson/
 - first_name: Arnaud
   last_name: Levy
-  image: arnaud-levy.jpg
   linkedin: https://www.linkedin.com/in/arnaudlevy/
 - first_name: Vincent
   last_name: Moreau
-  image: vincent-moreau.jpg
   linkedin: https://www.linkedin.com/in/vincent-moreau-76493262/
 - first_name: Yuna
   last_name: Orsini
-  image: yuna-orsini.jpg
   linkedin: https://www.linkedin.com/in/yunaorsini/
 - first_name: Sébastien
   last_name: Ortega
-  image: sebastien-ortega.jpg
   linkedin: https://www.linkedin.com/in/sebastienortega/
 - first_name: Fanny
   last_name: Picard
-  image: fanny-picard.jpg
   linkedin: https://www.linkedin.com/in/fanny-picard-a323017/
 - first_name: Charles
   last_name: Prévôt
-  image: charles-prevot.jpg
   linkedin: https://www.linkedin.com/in/prevotcharles/
 - first_name: Céline
   last_name: Réveillac
-  image: celine-reveillac.jpg
   linkedin: https://www.linkedin.com/in/celinereveillac/
 - first_name: Patricia
   last_name: Roche
-  image: patricia-roche.jpg
   linkedin: https://www.linkedin.com/in/patricia-roche/
 - first_name: Lottie
   last_name: Rocuet
-  image: lottie-rocuet.jpg
   linkedin: https://www.linkedin.com/in/lottie-rocuet-1092a1172/
 - first_name: Julie
-  last_name: Schwartz
-  image: julie-schwartz.jpg
+  last_name: Schwarz
   linkedin: https://www.linkedin.com/in/%F0%9F%8C%BFjulie-schwarz-3b5b1344/
 - first_name: Antoine
   last_name: Trouche
-  image: antoine-trouche.jpg
   linkedin: https://www.linkedin.com/in/antoine-trouche/
 - first_name: Emmanuel
   last_name: Zerafa
-  image: emmanuel-zerafa.jpg
   linkedin: https://www.linkedin.com/in/emmanuel-zerafa-15559822/

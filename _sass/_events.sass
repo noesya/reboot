@@ -1,15 +1,6 @@
 $margin: 120px
-.events
-  &__day
-    h3
-      @include normal-text
-      margin-bottom: 15px
-  &__disclaimer
-    @include small-text
 .event
   position: relative
-  border-top: 1px solid $transparent_grey
-  padding: 15px 0
   &__title
     margin-bottom: 5px
     margin-left: $margin
@@ -32,7 +23,7 @@ $margin: 120px
     text-transform: uppercase
     border-radius: 3px
     font-weight: bold
-    margin-top: 4px
+    margin-top: 10px
     @media(max-width: 768px)
       display: inline-block
       float: none
@@ -48,20 +39,12 @@ $margin: 120px
       right: 0
     &__start::after
       content: ' - '
-  &__persons
-    display: block
-    @include small-text
+  &__description
     margin-left: $margin
-    margin-bottom: 5px
+  &__persons
+    margin-left: $margin
     @media(max-width: 768px)
       margin-left: 0
-  &__person
-    display: inline
-    margin-bottom: 5px
-    &::after
-      content: ' + '
-    &:last-child::after
-      content: ''
   &__link
     @include very-small-text
     display: block
@@ -69,3 +52,29 @@ $margin: 120px
     margin-left: $margin
     @media(max-width: 768px)
       margin: 0
+
+.events
+  &__day
+    h3
+      @include normal-text
+      margin-bottom: 15px
+  &__disclaimer
+    @include small-text
+  .event
+    border-top: 1px solid $transparent_grey
+    padding: 15px 0
+    &__kind
+      margin-top: 6px
+    &__persons
+      display: block
+      @include small-text
+      margin-bottom: 5px
+      @media(max-width: 768px)
+        margin-left: 0
+    &__person
+      display: inline
+      margin-bottom: 5px
+      &::after
+        content: ' + '
+      &:last-child::after
+        content: ''
