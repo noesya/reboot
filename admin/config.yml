@@ -22,8 +22,9 @@ collections:
           - { label: 'Titre', name: 'title', widget: 'string' }
           - { label: 'Chapo', name: 'chapo', widget: 'markdown', minimal: true, buttons: ['bold', 'link', 'bulleted-list'], editor_components: [], modes: ['rich_text'] }
           - { label: 'Texte', name: 'text', widget: 'markdown', minimal: true, required: false, buttons: ['bold', 'link', 'bulleted-list'], editor_components: [], modes: [rich_text] }
-  - name: 'partners'
-    label: 'Partenaire'
+  - name: partners
+    label: Partenaires
+    label_singular: Partenaire
     folder: '_partners/'
     create: true
     extension: html
@@ -92,14 +93,17 @@ collections:
             widget: string
             required: false
   - name: persons
-    label: Personne
+    label: Personnes
+    label_singular: Personne
     folder: _persons
     create: true
-    slug: {{first_name}}-{{last_name}}
     editor:
       preview: false
     fields:
+      - { label: Nom complet, name: title }
       - { label: Prénom, name: first_name }
       - { label: Nom, name: last_name }
+      - { label: Description, name: description, required: false, widget: text }
+      - { label: Organisation, name: company, required: false }
       - { label: LinkedIn, name: linkedin, required: false }
       - { label: 'Afficher dans la page équipe ?', name: team, widget: boolean, required: false }

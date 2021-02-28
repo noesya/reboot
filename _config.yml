@@ -25,6 +25,12 @@ defaults:
       type: "events"
     values:
       layout: "event"
+  -
+    scope:
+      path: ""
+      type: "persons"
+    values:
+      layout: "person"
 
 collections:
   schools:
@@ -36,3 +42,6 @@ collections:
   events:
     output: true
     permalink: /programme/:name
+  persons:
+    output: true
+    permalink: /equipe/:name

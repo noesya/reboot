@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+{% assign name = page.first_name | append: ' ' | append: page.last_name %}
+<div class="person">
+  <img  src="/assets/images/people/{{ name | slugify: 'latin' }}.jpg"
+        alt="{{ person.name }}"
+        class="person__photo"
+        width="500">
+  <p class="chapo">{{ name }}</p>
+</div>
