@@ -9,7 +9,7 @@ permalink: /equipe
 
   <h2 class="category">L'équipe</h2>
   <section class="grid grid--small">
-    {% assign persons = site.persons | where: 'team', true %}
+    {% assign persons = site.persons | where: 'team', true | sort: 'last_name' %}
     {% for person in persons %}
       {% assign name = person.first_name | append: ' ' | append: person.last_name %}
       <article>
