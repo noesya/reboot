@@ -3,6 +3,9 @@ backend:
   branch: main
 media_folder: 'assets/uploads'
 locale: fr
+slug:
+  encoding: ascii
+  clean_accents: true
 collections:
   - name: 'pages'
     label: 'Pages'
@@ -124,8 +127,6 @@ collections:
     label_singular: Personne
     folder: _persons
     create: true
-    slug:
-      clean_accents: true
     editor:
       preview: false
     fields:
