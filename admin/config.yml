@@ -124,6 +124,8 @@ collections:
     label_singular: Personne
     folder: _persons
     create: true
+    slug:
+      clean_accents: true
     editor:
       preview: false
     fields:
@@ -139,3 +141,26 @@ collections:
       - { label: Organisation, name: company, required: false }
       - { label: LinkedIn, name: linkedin, required: false }
       - { label: 'Afficher dans la page équipe ?', name: team, widget: boolean, required: false }
+  - name: events
+    label: Événements
+    label_singular: Événement
+    folder: _events
+    create: true
+    extension: html
+    editor:
+      preview: false
+    fields:
+      - { label: Titre, name: title }
+      - { label: Type, name: kind, hint: 'Avec une capitale initiale (ex: Talk)' }
+      - { label: Jour, name: day, hint: 'Au format jj/mm/yyyy'  }
+      - { label: Début, name: start, hint: 'Au format 14:00' }
+      - { label: Fin, name: end, hint: 'Au format 15:00' }
+      - { label: Premier jour, name: first_day, required: false, hint: 'Uniquement pour les événements sur plusieurs jours' }
+      - label: Personnes
+        name: persons
+        widget: relation
+        collection: persons
+        multiple: true
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]

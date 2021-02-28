@@ -14,9 +14,15 @@
   </div>
   {% endif %}
   <ul class="event__persons">
-    {% for person in include.event.people %}
+    {% for slug in include.event.persons %}
+      {% for p in site.persons %}
+        {% assign p_slug = p.title | slugify: 'latin' %}
+        {% if p_slug == slug %}
+          {% assign person = p %}
+        {% endif %}
+      {% endfor %}
       <li class="event__person">
-        {{ person.name }}
+        {{ person.title }}
         {% if person.company %}
           <span class="event__person__company">@ {{ person.company }}</span>
         {% endif %}
