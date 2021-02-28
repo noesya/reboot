@@ -22,10 +22,24 @@ layout: default
   <p class="event__description">{{ page.description | correct_punctuation }}</p>
 
   <section class="event__persons grid grid--small">
-    {% for person in page.people %}
+    {% for slug in page.persons %}
+      {% for p in site.persons %}
+        {% assign p_slug = p.title | slugify: 'latin' %}
+        {% if p_slug == slug %}
+          {% assign person = p %}
+        {% endif %}
+      {% endfor %}
       <article class="person">
-        <img src="/assets/images/people/{{ person.name | slugify: 'latin' }}.jpg" alt="{{ person.name }} {{ person.last_name }}" class="person__photo" width="500">
-        <h2>{{ person.name }}</h2>
+        <img src="{{ person.image }}" alt="{{ person.title }}" class="person__photo" width="500">
+        <h2 class="person__name">
+          {{ person.title }}
+          {% if person.company %}
+            @ {{ person.company }}
+          {% endif %}
+        </h2>
+        {% if person.description %}
+          <p class="person__description">{{ person.description }}</p>
+        {% endif %}
         <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer" class="person__contact">LinkedIn</a>
       </article>
     {% endfor %}
