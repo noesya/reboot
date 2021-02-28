@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main
 media_folder: 'assets/uploads'
+locale: fr
 collections:
   - name: 'pages'
     label: 'Pages'
@@ -90,3 +91,15 @@ collections:
             name: url
             widget: string
             required: false
+  - name: persons
+    label: Personne
+    folder: _persons
+    create: true
+    slug: {{first_name}}-{{last_name}}
+    editor:
+      preview: false
+    fields:
+      - { label: Prénom, name: first_name }
+      - { label: Nom, name: last_name }
+      - { label: LinkedIn, name: linkedin, required: false }
+      - { label: 'Afficher dans la page équipe ?', name: team, widget: boolean, required: false }
