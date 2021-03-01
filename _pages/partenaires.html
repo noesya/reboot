@@ -14,9 +14,6 @@ text: Cela peut-être un MOOC, un support de formation, un dispositif numérique
   Creative Commons, c’est encore mieux. Contactez [l'équipe par ici !](/equipe).
 ---
 
-<div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
-<div>{{ page.text | markdownify | correct_punctuation }}</div>
-
 <h2 class="category">Un événement soutenu par...</h2>
 <section class="partners partners--gold">
   {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'gold' %}

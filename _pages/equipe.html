@@ -9,9 +9,6 @@ text: Les décisions à trancher sont mises au vote sur [la plateforme de
   on n'a encore jamais eu besoin de mettre une décision au vote.
 ---
 
-<div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
-<p>{{ page.text | markdownify | correct_punctuation }}</p>
-
 <h2 class="category">L'équipe</h2>
 <section class="persons">
   {% assign persons = site.persons | where: 'team', true | sort: 'last_name' %}

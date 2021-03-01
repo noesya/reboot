@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+<div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
+<p>{{ page.text | markdownify | correct_punctuation }}</p>
+
+{{ content }}
