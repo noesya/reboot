@@ -3,25 +3,28 @@ layout: default
 ---
 
 <article class="event">
-  {% if page.kind %}
-    <span class="event__kind">{{ page.kind }}</span>
-  {% endif %}
-  <p class="event__title chapo"><b>{{ page.title }}</b></p>
-  <div class="event__date">
-    {% if page.first_day %}
-    <span class="event__date__first_day">{{ page.first_day }}</span> ...<br>
+
+  <div class="event__informations">
+    {% if page.kind %}
+      <span class="event__kind">{{ page.kind }}</span>
     {% endif %}
-    <span class="event__date__day">{{ page.day }}</span><br>
-    {% if page.start %}
-      <span class="event__date__start">{{ page.start }}</span>
-    {% endif %}
-    {% if page.end %}
-      <span class="event__date__end">{{ page.end }}</span>
-    {% endif %}
+    <div class="event__date">
+      {% if page.first_day %}
+      <span class="event__date__first_day">{{ page.first_day }}</span> ...<br>
+      {% endif %}
+      <span class="event__date__day">{{ page.day }}</span><br>
+      {% if page.start %}
+        <span class="event__date__start">{{ page.start }}</span>
+      {% endif %}
+      {% if page.end %}
+        <span class="event__date__end">{{ page.end }}</span>
+      {% endif %}
+    </div>
   </div>
   <p class="event__description">{{ page.description | correct_punctuation }}</p>
 
-  <section class="event__persons grid grid--small">
+
+  <section class="event__persons">
     {% for slug in page.persons %}
       {% for p in site.persons %}
         {% assign p_slug = p.title | slugify: 'latin' %}

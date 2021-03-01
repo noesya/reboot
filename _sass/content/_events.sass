@@ -1,6 +1,7 @@
 $margin: 120px
 .event
   position: relative
+  margin-top: 30px
   &__title
     margin-bottom: 5px
     margin-left: $margin
@@ -14,34 +15,36 @@ $margin: 120px
       color: black
       @media (prefers-color-scheme: dark)
         color: white
+  &__informations
+    float: left
+    margin-bottom: 10px
+    @media(max-width: 768px)
+      float: none
   &__kind
     @include very-small-text
-    float: left
+    display: inline-block
     background: $color
     color: white
     padding: 2px 6px
     text-transform: uppercase
     border-radius: 3px
     font-weight: bold
-    margin-top: 10px
-    @media(max-width: 768px)
-      display: inline-block
-      float: none
-      margin-bottom: 5px
   &__date
     @include very-small-text
-    float: left
+    margin-top: 10px
     margin-bottom: 10px
     font-weight: bold
     @media(max-width: 768px)
       position: absolute
-      top: 20px
+      top: 11px
       right: 0
     &__start::after
       content: ' - '
   &__description
     margin-left: $margin
   &__persons
+    @include grid
+    @include grid--large
     margin-left: $margin
     @media(max-width: 768px)
       margin-left: 0
@@ -54,6 +57,8 @@ $margin: 120px
       margin: 0
 
 .events
+  @include grid
+  @include grid--extralarge
   &__day
     h3
       @include normal-text
@@ -61,8 +66,9 @@ $margin: 120px
   &__disclaimer
     @include small-text
   .event
+    margin: 0
     border-top: 1px solid $transparent_grey
-    padding: 15px 0
+    padding: 15px 0 20px
     &__kind
       margin-top: 6px
     &__persons

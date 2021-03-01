@@ -1,11 +1,11 @@
-<div class="events">
+<div>
   <h2 class="category">Programme</h2>
   <p class="events__disclaimer">
     Attention, ce programme est sujet à modifications.
     Les événements seront tous accessibles en distanciel.
     Si les conditions le permettent, certains événements pourront être à la fois en présentiel et en distanciel.
   </p>
-  <div class="grid grid--extralarge">
+  <div class="events">
     <div class="events__day">
       <h3>Jeudi 30 septembre</h3>
       {% assign events = site.events | where: 'day', '30/09/2021' | sort: 'start' %}

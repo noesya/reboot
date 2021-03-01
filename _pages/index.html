@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Reboot !
 description: 2 jours pour hacker les métiers de la communication !
   Communication, publicité, relations presse, relations publiques, influence,
   numérique...
@@ -20,19 +21,17 @@ text: "Communication, publicité, relations presse, relations publiques,
   en communication ? Voilà la page[ étudiants](/etudiants). Vous ne savez pas
   trop comment, mais vous voulez aider ? Contactez [l'équipe](/equipe) !"
 ---
-<div class="index">
-  <div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
-  <div>{{ page.text | markdownify | correct_punctuation }}</div>
-  <h2 class="category">Un événement soutenu par...</h2>
-  <section class="grid grid--large">
-    {% assign validated_partners = site.partners | where: 'level', 'gold' | where: 'validated', true %}
-    {% for partner in validated_partners %}
-    <article>
-      <a href="{{ partner.url }}">
-        <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid" width="500">
-      </a>
-    </article>
-    {% endfor %}
-  </section>
-  {% include events.html %}
-</div>
+<div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
+<div>{{ page.text | markdownify | correct_punctuation }}</div>
+<h2 class="category">Un événement soutenu par...</h2>
+<section class="partners partners--gold">
+  {% assign validated_partners = site.partners | where: 'level', 'gold' | where: 'validated', true %}
+  {% for partner in validated_partners %}
+  <article class="partner">
+    <a href="{{ partner.url }}">
+      <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid" width="500">
+    </a>
+  </article>
+  {% endfor %}
+</section>
+{% include events.html %}

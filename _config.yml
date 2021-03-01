@@ -33,6 +33,8 @@ defaults:
       layout: "person"
 
 collections:
+  pages:
+    output: true
   schools:
     output: true
     permalink: /ecoles/:name

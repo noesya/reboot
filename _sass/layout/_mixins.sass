@@ -1,0 +1,41 @@
+@mixin large-text
+  font-size: 3rem
+  line-height: 3.5rem
+  font-weight: 200
+  @media (max-width: 768px)
+    font-size: 2rem
+    line-height: 2.8rem
+
+@mixin normal-text
+  font-size: 1.4rem
+  line-height: 2rem
+
+@mixin small-text
+  font-size: 1.2rem
+  line-height: 1.6rem
+
+@mixin very-small-text
+  font-size: 0.8rem
+  line-height: 1.2rem
+
+@mixin grid
+  display: grid
+  grid-gap: 30px
+  grid-template-columns: repeat(6, 1fr)
+  @media(max-width: 768px)
+    grid-template-columns: repeat(2, 1fr)
+  h2, h3
+    margin-top: 5px
+    margin-bottom: 5px
+    a
+      line-height: 1.5rem
+
+@mixin grid--extralarge
+  grid-template-columns: repeat(2, 1fr)
+  @media(max-width: 768px)
+    grid-template-columns: 1fr
+
+@mixin grid--large
+  grid-template-columns: repeat(4, 1fr)
+  @media(max-width: 768px)
+    grid-template-columns: 1fr

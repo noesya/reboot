@@ -14,7 +14,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   -moz-osx-font-smoothing: grayscale
 
 main > h1
-  display: none
+  @include large-text
+  margin-top: 30px
+  font-weight: bold
+  color: $color
 
 b, strong
   font-weight: bold !important

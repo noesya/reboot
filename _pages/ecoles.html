@@ -5,14 +5,15 @@ permalink: /ecoles
 
 <p class="chapo">{{ site.data.texts.ecoles.chapo | correct_punctuation }}</p>
 <p>{{ site.data.texts.ecoles.text | correct_punctuation }}</p>
+
 <h2 class="category">Écoles participantes</h2>
-<section class="grid grid--small">
+<section class="schools">
   {% for school in site.schools %}
-    <article>
+    <article class="school">
       <a href="{{ school.url }}">
         <img src="/assets/images/schools/{{ school.slug }}.png" alt="{{ school.title }}" class="img-fluid">
       </a>
-      <h2><a href="{{ school.url }}">{{ school.title }}</a></h2>
+      <h3 class="school__name"><a href="{{ school.url }}">{{ school.title }}</a></h3>
     </article>
   {% endfor %}
 </section>
