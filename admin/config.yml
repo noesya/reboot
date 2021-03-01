@@ -133,8 +133,8 @@ collections:
       - { label: Titre, name: title }
       - { label: Type, name: kind, hint: 'Avec une capitale initiale (ex: Talk)' }
       - { label: Jour, name: day, hint: 'Au format jj/mm/yyyy'  }
-      - { label: Début, name: start, hint: 'Au format 14:00' }
-      - { label: Fin, name: end, hint: 'Au format 15:00' }
+      - { label: Début, name: start, hint: 'Au format 14h00' }
+      - { label: Fin, name: end, hint: 'Au format 15h00' }
       - { label: Premier jour, name: first_day, required: false, hint: 'Uniquement pour les événements sur plusieurs jours' }
       - label: Personnes
         name: persons
