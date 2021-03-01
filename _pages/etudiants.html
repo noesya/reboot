@@ -3,5 +3,5 @@ title: Étudiants
 permalink: /etudiants
 ---
 
-<p class="chapo">{{ site.data.texts.etudiants.chapo | correct_punctuation }}</p>
-<p>{{ site.data.texts.etudiants.text | correct_punctuation }}</p>
+<div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
+<p>{{ page.text | markdownify | correct_punctuation }}</p>

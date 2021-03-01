@@ -1,12 +1,6 @@
 etudiants:
   chapo: "<b>Vous êtes étudiant·e en communication ? Impliquez votre école !</b> Vous êtes étudiant·e en communication, en relations presse, en communication visuelle ou en communication digitale ? Vous voulez vivre dans un monde avec des abeilles et travailler dans un métier qui a du sens ? Changez le monde de la com !"
   text: "Découvrez <a href='/programme'>le programme</a>, parlez-en dans votre école, et si besoin de plus de précisions, n'hésitez pas, <a href='/equipe'>contactez l'équipe par ici</a>. Tout est gratuit et ouvert."
-ecoles:
-  chapo: "<b>Vous avez envie de former vos étudiant·e·s ? Rejoignez les écoles !</b> Vous souhaitez intégrer les enjeux sociétaux et environnementaux dans vos enseignements, ou peut-être le faites-vous déjà ? Reboot! est une opportunité d’accéder à de nombreuses ressources, de stimuler les étudiant·e·s et d’accélérer. Ateliers “clés en main”, MOOCS, espace de démocratie numérique (Decidim), conférences... tout est possible !"
-  text: "Si le calendrier pédagogique vous le permet, intégrez le 30 septembre et le 1er octobre 2021 dans votre emploi du temps. Si les dates ne sont pas adaptées pour vous, peut-être pouvez-vous faire travailler vos étudiant·e·s avant l’événement, et contribuer en asynchrone ? Et si ça ne passe pas du tout, n’hésitez pas à en parler à vos étudiant·e·s, qui souhaiteront peut-être s’en saisir par eux-mêmes ! Besoin d'aide ? Contactez <a href='/equipe'>l'équipe</a>!"
-equipe:
-  chapo: "<b>Le projet Reboot! est porté par un collectif de professionnel·le·s de la communication engagés.</b> Toutes les contributions sont bienvenues :)"
-  text: "Les décisions à trancher sont mises au vote sur <a href='https://www.communicationmutation.org/processes/reboot' target='_blank' rel='noreferrer'>la plateforme de démocratie contributive Communication Mutation</a>. Cela dit, on n'a encore jamais eu besoin de mettre une décision au vote."
 informations:
   chapo: "<b>Vous voulez être au courant de l'actualité du projet ?</b> Inscrivez-vous sur Substack dans le champ ci-dessous, ou rendez-vous directement <a href='https://rebootorg.substack.com/' target='_blank' rel='noreferrer'>sur la publication Substack</a>."
 events:

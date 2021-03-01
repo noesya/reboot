@@ -5,12 +5,12 @@ chapo: "**Le projet Reboot! est porté par un collectif de professionnel·le·s 
   la communication engagé·e·s.** Toutes les contributions sont bienvenues :)"
 text: Les décisions à trancher sont mises au vote sur [la plateforme de
   démocratie contributive Communication
-  Mutation](https://www.communicationmutation.org/processes/reboot). Cela dit,
+  Mutation](/partenaires/communication-mutation). Cela dit,
   on n'a encore jamais eu besoin de mettre une décision au vote.
 ---
 
-<p class="chapo">{{ site.data.texts.equipe.chapo | correct_punctuation }}</p>
-<p>{{ site.data.texts.equipe.text | correct_punctuation }}</p>
+<div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
+<p>{{ page.text | markdownify | correct_punctuation }}</p>
 
 <h2 class="category">L'équipe</h2>
 <section class="persons">

@@ -7,51 +7,30 @@ slug:
   encoding: ascii
   clean_accents: true
 collections:
-  - name: 'pages'
-    label: 'Pages'
+  - name: pages
+    label: Pages
+    folder: _pages
+    extension: html
     editor:
       preview: false
-    files:
-      - label: 'Index'
-        name: 'index'
-        file: 'pages/index.html'
-        fields:
-          - label: Chapo
-            name: chapo
-            widget: markdown
-            minimal: true
-            buttons: [bold, link, bulleted-list]
-            editor_components: []
-            modes: ['rich_text']
-          - label: Texte
-            name: text
-            widget: markdown
-            minimal: true
-            required: false
-            buttons: [bold, link, bulleted-list]
-            editor_components: []
-            modes: [rich_text]
-      - label: 'Partenaires'
-        name: 'partenaires'
-        file: 'pages/partenaires.html'
-        fields:
-          - label: Titre
-            name: title
-          - label: Chapo
-            name: chapo
-            widget: markdown
-            minimal: true
-            buttons: [bold, link, bulleted-list]
-            editor_components: []
-            modes: ['rich_text']
-          - label: Texte
-            name: text
-            widget: markdown
-            minimal: true
-            required: false
-            buttons: [bold, link, bulleted-list]
-            editor_components: []
-            modes: [rich_text]
+    fields:
+      - label: Titre
+        name: title
+      - label: Chapo
+        name: chapo
+        widget: markdown
+        minimal: true
+        buttons: [bold, link, bulleted-list]
+        editor_components: []
+        modes: ['rich_text']
+      - label: Texte
+        name: text
+        widget: markdown
+        minimal: true
+        required: false
+        buttons: [bold, link, bulleted-list]
+        editor_components: []
+        modes: [rich_text]
   - name: partners
     label: Partenaires
     label_singular: Partenaire
