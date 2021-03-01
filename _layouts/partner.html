@@ -35,7 +35,7 @@ layout: default
         </div>
         <div class="resource__texts">
           <h3>{{ resource.title | correct_punctuation  }}</h3>
-          <p>{{ resource.description | correct_punctuation }}</p>
+          <p>{{ resource.description | markdownify | correct_punctuation }}</p>
           {% if resource.url %}
             <p class="resource__link">
               <a href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.url }}</a>
