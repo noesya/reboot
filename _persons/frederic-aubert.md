@@ -7,4 +7,5 @@ description: Fondateur Projet Candide - accompagner les organisations face au
   changement climatique
 company: Projet Candide
 linkedin: https://www.linkedin.com/in/fredericaubert/
+team: true
 ---
