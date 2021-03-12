@@ -1,0 +1,26 @@
+.resources
+  &__table
+    th, td
+      padding: 10px 20px 10px 0
+    th
+      text-align: left
+      font-size: 12px
+      text-transform: uppercase
+    tr, th
+      border-bottom: $transparent_grey solid 1px
+    &__partner, &__title
+      @include small-text
+    &__partner
+      font-weight: bold
+    &__description
+      @include very-small-text
+    @include mobile
+      thead
+        display: none
+      td
+        display: block
+        padding: 5px 0 0 0
+      tr
+        display: block
+        padding-bottom: 15px
+        margin-bottom: 15px
