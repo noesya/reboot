@@ -6,18 +6,18 @@ permalink: /ressources
 <table class="resources__table">
   <thead>
     <tr>
-      <th>Source</th>
       <th>Resource</th>
       <th>Description</th>
+      <th>Source</th>
     </tr>
   </thead>
   <tbody>
     {% for partner in site.partners %}
       {% for resource in partner.resources %}
         <tr>
-          <td class="resources__table__partner"><a href="/partenaires/{{ partner.slug }}">{{ partner.title }}</a></td>
           <td class="resources__table__title"><a href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.title }}</td>
           <td class="resources__table__description">{{ resource.description | strip_html | truncate: 200 }}</td>
+          <td class="resources__table__partner"><a href="/partenaires/{{ partner.slug }}">{{ partner.title }}</a></td>
         </tr>
       {% endfor %}
     {% endfor %}
