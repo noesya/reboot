@@ -15,9 +15,12 @@ text: Si le calendrier pédagogique vous le permet, intégrez le 30 septembre et
   s’en saisir par eux-mêmes ! Besoin d'aide ? Contactez [l'équipe](/equipe) !
 ---
 
+{% assign students = 0 %}
+
 <h2 class="category">Écoles participantes</h2>
 <section class="schools">
   {% for school in site.schools %}
+    {% assign students = students | plus: school.students %}
     <article class="school">
       <a href="{{ school.url }}">
         <img src="/assets/images/schools/{{ school.slug }}.png" alt="{{ school.title }}" class="img-fluid">
@@ -26,3 +29,6 @@ text: Si le calendrier pédagogique vous le permet, intégrez le 30 septembre et
     </article>
   {% endfor %}
 </section>
+
+<br><br>
+{{ students }} étudiants impliqués
