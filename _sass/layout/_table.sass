@@ -1,0 +1,22 @@
+table
+  margin-bottom: 15px
+  th, td
+    padding: 10px 30px 10px 0
+  th
+    text-align: left
+    font-size: 12px
+    text-transform: uppercase
+  tr, th
+    border-bottom: $transparent_grey solid 1px
+  td
+    @include small-text
+  @include mobile
+    thead
+      display: none
+    td
+      display: block
+      padding: 5px 0 0 0
+    tr
+      display: block
+      padding-bottom: 15px
+      margin-bottom: 15px
