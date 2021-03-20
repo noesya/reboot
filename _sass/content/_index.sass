@@ -1,15 +1,26 @@
 .pages__index
-  background-image: url('/assets/images/background/dark.svg')
+  background-image: url('/assets/images/index/dark.svg')
   background-repeat: no-repeat
   background-position: right 82px
   background-size: 800px
-  .breadcrumb
-    display: none
+  @include tablet
+    background-size: 600px
   @include mobile
     background-size: 400px
   main
     padding-top: 600px
     @include mobile
       padding-top: 300px
-    > h1
-      display: none
+  .index
+    &__hook
+      max-width: 500px
+      margin-top: -500px
+      margin-bottom: 60px
+      @include tablet
+        margin-top: -100px
+      @include mobile
+        margin-top: 30px
+      &__title
+        @include large-text
+      &__dates
+        margin-top: 60px
