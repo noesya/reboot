@@ -1,8 +1,6 @@
 html
-  background: white
-  @media (prefers-color-scheme: dark)
-    background: black
-    color: white
+  background: black
+  color: white
 
 body
   position: relative
@@ -68,8 +66,6 @@ a
   text-decoration-color: adjust-color($color, $alpha: -0.5)
   text-underline-offset: 3px
   color: $color
-  @media (prefers-color-scheme: dark)
-    color: white
   &:hover
     text-decoration-color: $color
   &[target="_blank"]
@@ -82,5 +78,4 @@ a
       background-size: contain
       display: inline-block
       vertical-align: -0.1rem
-      @media (prefers-color-scheme: dark)
-        filter: invert(1)
+      filter: invert(1)

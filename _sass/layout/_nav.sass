@@ -4,8 +4,7 @@ nav
   border-bottom: 1px solid $transparent_grey
   .logo
     z-index: 10
-    @media (prefers-color-scheme: dark)
-      filter: invert(1)
+    filter: invert(1)
   .mobile_button
     display: none
   #menu
@@ -22,10 +21,8 @@ nav
           padding: 15px
         a
           font-weight: bold
-          color: black
+          color: white
           text-decoration: none
-          @media (prefers-color-scheme: dark)
-            color: white
           &.active
             color: $color
   @media(max-width: 768px)
@@ -36,9 +33,7 @@ nav
       position: absolute
       font-weight: bold
       padding: 15px
-      color: black
-      @media (prefers-color-scheme: dark)
-        color: white
+      color: white
       &__open
         top: -15px
         right: -15px
@@ -76,9 +71,7 @@ nav
   -ms-overflow-style: none
   scrollbar-width: none
   .breadcrumb-item a
-    color: black
-    @media (prefers-color-scheme: dark)
-      color: white
+    color: white
   .breadcrumb-item.active
     color: $color
     font-weight: bold
@@ -113,8 +106,6 @@ footer
   a
     font-size: 0.9rem
     text-decoration: none
-    color: black
-    @media (prefers-color-scheme: dark)
-      color: white
+    color: white
   iframe
     border: none
