@@ -1,7 +1,7 @@
 <article class="event">
   <div class="event__informations">
     {% if include.event.kind %}
-      <span class="event__kind">{{ include.event.kind }}</span>
+      <span class="event__kind event__kind--{{ include.event.kind | slugify: 'latin' }}">{{ include.event.kind }}</span>
     {% endif %}
     {% if include.event.start %}
       <div class="event__date">
