@@ -1,4 +1,16 @@
 .resources
-  &__table
+  margin-top: 60px
+  @include grid
+  @include grid--large
+  &__resource
+    border: 1px solid $transparent_grey
+    &__header
+      max-height: 250px
+      overflow: hidden
+    &__texts
+      padding: 20px 15px
     &__description, &__partner
       @include very-small-text
+    &__url
+      display: block
+      text-align: right

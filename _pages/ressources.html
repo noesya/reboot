@@ -1,25 +1,25 @@
 ---
 title: Espace ressources
 permalink: /ressources
+chapo: "**Tout pour apprendre dès aujourd'hui !** MOOCs, cours, guides, rapports, outils... Ces outils vous sont proposés gratuitement par [les partenaires](/partenaires) Reboot !"
 ---
 
-<table class="resources__table">
-  <thead>
-    <tr>
-      <th>Resource</th>
-      <th>Description</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for partner in site.partners %}
-      {% for resource in partner.resources %}
-        <tr>
-          <td class="resources__table__title"><a href="{{ resource.url }}" target="_blank" rel="noreferrer">{{ resource.title }}</td>
-          <td class="resources__table__description">{{ resource.description | strip_html | truncate: 200 }}</td>
-          <td class="resources__table__partner"><a href="/partenaires/{{ partner.slug }}">{{ partner.title }}</a></td>
-        </tr>
-      {% endfor %}
+<div class="resources">
+  {% for partner in site.partners %}
+    {% for resource in partner.resources %}
+      <div class="resources__resource">
+        {% if resource.image %}
+          <div class="resources__resource__header">
+            <img src="{{ resource.image }}" alt="{{ resource.title }}" class="resources__resource__image">
+          </div>
+        {% endif %}
+        <div class="resources__resource__texts">
+          <h2 class="resources__resource__title">{{ resource.title }}</h2>
+          <p class="resources__resource__partner"><a href="/partenaires/{{ partner.slug }}">{{ partner.title }}</a></p>
+          <p class="resources__resource__description">{{ resource.description | strip_html | truncate: 200 }}</p>
+          <a href="{{ resource.url }}" target="_blank" rel="noreferrer" class="resources__resource__url">Accéder à la ressource</a>
+        </div>
+      </div>
     {% endfor %}
-  </tbody>
-</table>
+  {% endfor %}
+</div>
