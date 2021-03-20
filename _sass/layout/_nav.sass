@@ -17,6 +17,11 @@ nav
         display: inline-block
         &::after
           content: " / "
+        &:last-child
+          a
+            padding-right: 0
+          &::after
+            content: ""
         span, a
           padding: 15px
         a
