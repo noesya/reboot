@@ -13,11 +13,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-main > h1
-  @include large-text
-  margin-top: 30px
-  font-weight: bold
-  color: $color
+main
+  > h1
+    @include large-text
+    margin-top: 30px
+    font-weight: bold
+    color: $color
 
 b, strong
   font-weight: bold !important
@@ -26,6 +27,14 @@ p
   @include normal-text
   margin-bottom: 1rem
   max-width: $width
+
+aside
+  border: 1px solid $transparent_grey
+  padding: 15px 30px
+  margin-top: 30px
+  max-width: $width
+  p
+    @include very-small-text
 
 .chapo
   margin-top: 30px

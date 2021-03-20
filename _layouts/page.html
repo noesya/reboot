@@ -1,8 +1,14 @@
 ---
-layout: default
+layout: full
 ---
 
 <div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
 <p>{{ page.text | markdownify | correct_punctuation }}</p>
+
+{% if page.aside %}
+  <aside>
+    <p>{{ page.aside | markdownify | correct_punctuation }}</p>
+  </aside>
+{% endif %}
 
 {{ content }}

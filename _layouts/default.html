@@ -33,15 +33,6 @@
     <link rel="preload" href="/assets/fonts/AesteticoFormal-Bold/font.woff2" as="font" crossorigin="anonymous" />
   </head>
   <body class="{{ page.path | remove: '.html' | remove: '_' | replace: '/', '__' }}">
-    <div class="wrapper">
-      <div class="cursor"></div>
-    </div>
-    {% include nav.html %}
-    {% include breadcrumb.html %}
-    <main>
-      <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-      {{ content }}
-    </main>
-    {% include footer.html %}
+    {{ content }}
   </body>
 </html>

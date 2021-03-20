@@ -1,14 +1,21 @@
-- title: Accueil
-  slug: /
-- title: Programme
-  slug: /programme
-- title: Étudiant·e·s
-  slug: /etudiants
-- title: Écoles
-  slug: /ecoles
-- title: Partenaires
-  slug: /partenaires
-- title: Ressources
-  slug: /ressources
-- title: Équipe
-  slug: /equipe
+header:
+  - title: Accueil
+    slug: /
+  - title: Le programme
+    slug: /programme
+  - title: Espace ressources
+    slug: /ressources
+  # - title: Vous êtes...
+  - title: Étudiant·e·s
+    slug: /etudiants
+  - title: Écoles
+    slug: /ecoles
+  - title: Partenaire
+    slug: /partenaires
+footer:
+  - title: Équipe
+    slug: /equipe
+  - title: Newsletter
+    slug: /informations
+  - title: Mentions légales
+    slug: /mentions-legales
