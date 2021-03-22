@@ -5,4 +5,11 @@ layout: full
 <div class="school">
   <img src="/assets/images/schools/{{ page.slug }}.png" alt="{{ page.title }}" class="school__logo" width="672">
   <p class="chapo">{{ content | correct_punctuation  }}</p>
+
+  {% if page.site %}
+    <h2 class="category">Site web</h2>
+    <p class="partner__site">
+      <a href="{{ page.site }}" target="_blank" rel="noreferrer">{{ page.site }}</a>
+    </p>
+  {% endif %}
 </div>
