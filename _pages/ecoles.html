@@ -5,12 +5,12 @@ chapo: "**Les écoles s’engagent pour une communication plus responsable !** Q
 aside: "Vous représentez une école ? [Ça se passe par là !](/ecoles/participer)"
 ---
 
-{% assign students = 0 %}
+<p class="chapo">{% include count.html %}</p>
 
 <h2 class="category">Écoles participantes</h2>
+
 <section class="schools">
   {% for school in site.schools %}
-    {% assign students = students | plus: school.students %}
     <article class="school">
       <a href="{{ school.url }}">
         <img src="/assets/images/schools/{{ school.slug }}.png" alt="{{ school.title }}" class="img-fluid">
@@ -19,6 +19,3 @@ aside: "Vous représentez une école ? [Ça se passe par là !](/ecoles/particip
     </article>
   {% endfor %}
 </section>
-
-<br><br>
-Déjà {{ students }} étudiants impliqués
