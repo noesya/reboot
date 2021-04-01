@@ -14,7 +14,7 @@
   content: attr(data-text);
   position: absolute;
   left: -2px;
-  text-shadow: -5px 0 magenta;
+  text-shadow: -5px 0 #80C294;
   background: black;
   overflow: hidden;
   top: 0;
@@ -25,7 +25,7 @@
   content: attr(data-text);
   position: absolute;
   left: 2px;
-  text-shadow: -5px 0 lightgreen;
+  text-shadow: -5px 0 #F095B5;
   background: black;
   overflow: hidden;
   top: 0;
