@@ -2,4 +2,8 @@
 {% for school in site.schools %}
   {% assign students = students | plus: school.students %}
 {% endfor %}
-<b>Déjà {{ students }} étudiants impliqués 👩‍🎓🧑‍🎓🤩</b>
+<div class="container">
+  <div class="glitch" data-text="{{ students }}‍">{{ students }}‍</div>
+  <div class="glow">{{ students }}‍</div>
+  <p class="subtitle">Déjà {{ students }}‍ étudiants prêts à hacker les métiers de la com 🌍</p>
+</div>
