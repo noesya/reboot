@@ -2,8 +2,13 @@
 layout: full
 ---
 
-<div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
-<p>{{ page.text | markdownify | correct_punctuation }}</p>
+{% if page.chapo %}
+  <div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
+{% endif %}
+
+{% if page.text %}
+  <p>{{ page.text | markdownify | correct_punctuation }}</p>
+{% endif %}
 
 {% if page.aside %}
   <aside>

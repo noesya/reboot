@@ -1,6 +1,2 @@
-{% assign students = 0 %}
-{% for school in site.schools %}
-  {% assign students = students | plus: school.students %}
-{% endfor %}
-<p class="count">{{ students }}‍</p>
-<p>Déjà {{ students }}‍ étudiant·e·s prêts à hacker les métiers de la com 🌍</p>
+<p class="count">{% include count_raw.html %}‍</p>
+<p>Déjà {% include count_raw.html %} étudiant·e·s prêts à hacker les métiers de la com 🌍</p>

@@ -1,0 +1,5 @@
+{% assign students = 0 %}
+{% for school in site.schools %}
+  {% assign students = students | plus: school.students %}
+{% endfor %}
+{{ students }}‍
