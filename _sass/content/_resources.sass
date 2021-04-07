@@ -3,14 +3,18 @@
   @include grid
   @include grid--large
   &__resource
-    border: 1px solid $transparent_grey
-    &__header
-      max-height: 250px
-      overflow: hidden
+    background: #2d2d2d
+    &__title
+      margin-top: 0 !important
     &__texts
       padding: 20px 15px
-    &__description, &__partner
+    &__description
+      @include small-text
+    &__partner
       @include very-small-text
+      font-weight: bold
+      text-transform: uppercase
     &__url
       display: block
+      font-weight: bold
       text-align: right
