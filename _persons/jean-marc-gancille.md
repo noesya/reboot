@@ -3,7 +3,7 @@ title: "Jean-Marc Gancille"
 first_name: "Jean-Marc"
 last_name: Gancille
 image: /assets/images/people/jean-marc-gancille.jpg
-description: "Entrepreneur social, militant écolo et animaliste, j’ai co-fondé et dirigé de nombreuses entreprises et associations ayant pour vocation la transition de notre modèle de société vers plus de soutenabilité"
+description: "Science et conservation des cétacés / Auteur de “Ne plus se mentir” et “Carnage”"
 linkedin: https://www.linkedin.com/in/jeanmarc-gancille/
 team: false
 ---
