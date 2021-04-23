@@ -16,7 +16,12 @@ chapo: "**Tout pour apprendre dès aujourd'hui !** MOOCs, cours, guides, rapport
         <div class="resources__resource__texts">
           <h2 class="resources__resource__title">{{ resource.title }}</h2>
           <p class="resources__resource__partner"><a href="/partenaires/{{ partner.slug }}">{{ partner.title }}</a></p>
-          <p class="resources__resource__description">{{ resource.description | strip_html | truncate: 200 }}</p>
+          <p class="resources__resource__description">
+            {% if resource.excerpt %}
+              {{ resource.excerpt | correct_punctuation }}
+            {% else %}
+              {{ resource.description | strip_html | truncate: 200 }}</p>
+            {% endif %}
           <a href="{{ resource.url }}" target="_blank" rel="noreferrer" class="resources__resource__url">Accéder à la ressource</a>
         </div>
       </div>
