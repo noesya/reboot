@@ -20,9 +20,22 @@ aside: "Vous avez des ressources à partager ou vous voulez devenir partenaire ?
   {% endfor %}
 </section>
 
-<h2 class="category">Tous les partenaires</h2>
+<h2 class="category">Partenaires</h2>
 <section class="partners partners--silver">
   {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'silver' %}
+  {% for partner in validated_partners %}
+    <article>
+      <a href="{{ partner.url }}">
+        <img src="{{ partner.cover }}" alt="{{ partner.title }}" class="img-fluid">
+      </a>
+      <h3><a href="{{ partner.url }}">{{ partner.title }}</a></h3>
+    </article>
+  {% endfor %}
+</section>
+
+<h2 class="category">Soutiens</h2>
+<section class="partners partners--bronze">
+  {% assign validated_partners = site.partners | where: 'validated', true | where: 'level', 'bronze' %}
   {% for partner in validated_partners %}
     <article>
       <a href="{{ partner.url }}">
