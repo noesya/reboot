@@ -1,0 +1,21 @@
+.ethics
+  &__version
+    @include very-small-text
+  &__part
+    margin-top: $margin / 2
+    margin-bottom: $margin / 4
+  &__article
+    clear: both
+    &__number
+      float: left
+      @include very-small-text
+      text-transform: uppercase
+      letter-spacing: 1px
+      @include mobile
+        margin-top: $margin / 4
+        float: none
+    &__text
+      @include small-text
+      margin-left: $margin
+      @include mobile
+        margin-left: 0
