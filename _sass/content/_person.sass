@@ -2,6 +2,7 @@
   @include grid
 
 .person
+  position: relative
   &__contact
     @include very-small-text
     display: block
@@ -13,3 +14,12 @@
       filter: grayscale(0%)
   &__description
     @include very-small-text
+  &__admin
+    @include very-small-text
+    text-transform: uppercase
+    letter-spacing: 1px
+    background: black
+    padding: 0px 4px
+    position: absolute
+    right: 5px
+    top: 5px

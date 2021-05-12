@@ -11,11 +11,14 @@ text: Les décisions à trancher sont mises au vote sur Slack. Pour nous contac
   {% assign persons = site.persons | where: 'team', true | sort: 'last_name' %}
   {% for person in persons %}
     {% assign name = person.first_name | append: ' ' | append: person.last_name %}
-    <article>
+    <article class="person">
       <img  src="/assets/images/people/{{ name | slugify: 'latin' }}.jpg"
             alt="{{ person.name }}"
             class="person__photo"
             width="500">
+      {% if person.admin %}
+        <span class="person__admin">admin</span>
+      {% endif %}
       <h3 class="person__name">{{ person.first_name }} {{ person.last_name }}</h3>
       <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer" class="person__contact">LinkedIn</a>
     </article>

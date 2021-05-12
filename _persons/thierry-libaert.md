@@ -6,5 +6,5 @@ description: Auteur de nombreux livres et articles sur l'Europe, la communicatio
 image: /assets/images/people/thierry-libaert.jpg
 company: Earth & Life Institute
 linkedin: https://www.linkedin.com/in/thierry-libaert/
-team: true
+team: false
 ---
