@@ -1,0 +1,20 @@
+---
+title: Espace presse
+permalink: /presse
+---
+
+<section class="press">
+  {% for file in site.data.press.downloads %}
+    {% assign filename = file.path | split: '/' | last %}
+    {% assign thumb = filename | append: '.jpg' %}
+    <article class="press__file">
+      <a  href="{{ file.path }}"
+          download="{{ filename }}"
+          target="_blank" rel="nofollow">
+          <img src="/assets/files/{{ thumb }}" alt="{{ partner.title }}" class="img-fluid">
+          <br>
+          {{ file.title }}
+      </a>
+    </article>
+  {% endfor %}
+</section>
