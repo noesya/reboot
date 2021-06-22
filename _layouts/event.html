@@ -47,4 +47,18 @@ layout: full
       </article>
     {% endfor %}
   </section>
+
+  {% if page.channel %}
+    <section class="event__video">
+      <div id="twitch-embed"></div>
+      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+      <script type="text/javascript">
+        new Twitch.Embed("twitch-embed", {
+          width: 1140,
+          height: 640,
+          channel: "{{ page.channel }}"
+        });
+      </script>
+    </section>
+  {% endif %}
 </article>
