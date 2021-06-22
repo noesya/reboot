@@ -48,7 +48,7 @@ layout: full
     {% endfor %}
   </section>
 
-  {% if page.channel %}
+  {% if page.twitch %}
     <section class="event__video">
       <div id="twitch-embed"></div>
       <script src="https://embed.twitch.tv/embed/v1.js"></script>
@@ -56,7 +56,7 @@ layout: full
         new Twitch.Embed("twitch-embed", {
           width: '100%',
           height: 640,
-          channel: "{{ page.channel }}"
+          channel: "{{ page.twitch }}"
         });
       </script>
     </section>
