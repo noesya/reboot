@@ -20,12 +20,5 @@
         {% include event.html event=event %}
       {% endfor %}
     </div>
-    <div class="events__day">
-      <h3>Du 1er au 22 octobre</h3>
-      {% assign events = site.events | where: 'day', '22/10/2021' | sort: 'start' %}
-      {% for event in events %}
-        {% include event.html event=event %}
-      {% endfor %}
-    </div>
   </div>
 </div>
