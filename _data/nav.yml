@@ -32,3 +32,12 @@ social:
     slug: https://twitter.com/Rebootevent2021
   - title: LinkedIn
     slug: https://www.linkedin.com/company/reboot-2021
+roles:
+  - title: Animation
+    slug: animation
+  - title: Responsable technique
+    slug: tech
+  - title: Responsable relations
+    slug: relation
+  - title: Responsable modération
+    slug: moderation
