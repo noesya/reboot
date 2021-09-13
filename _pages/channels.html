@@ -1,0 +1,26 @@
+---
+title: Chaînes Twitch
+permalink: /chaines
+---
+
+{% for channel in site.data.nav.channels %}
+    <section class="channel">
+        <h2>Chaîne {{ channel.slug }} - {{ channel.title }}</h2>
+        <div class="events">
+            <div class="events__day">
+              <h3><img src="/assets/images/programme/jeudi.svg" alt="Jeudi 30 septembre" width="300"></h3>
+              {% assign events = site.events | where: 'day', '30/09/2021' | where: 'channel', channel.slug | sort: 'start' %}
+              {% for event in events %}
+                {% include event.html event=event %}
+              {% endfor %}
+            </div>
+            <div class="events__day">
+              <h3><img src="/assets/images/programme/vendredi.svg" alt="Vendredi 1er octobre" width="300"></h3>
+              {% assign events = site.events | where: 'day', '01/10/2021' | where: 'channel', channel.slug | sort: 'start' %}
+              {% for event in events %}
+                {% include event.html event=event %}
+              {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endfor %}

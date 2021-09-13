@@ -41,3 +41,10 @@ roles:
     slug: relation
   - title: Responsable modération
     slug: moderation
+channels:
+  - title: Publicité
+    slug: 1
+  - title: Numérique
+    slug: 2
+  - title: RSE
+    slug: 3
