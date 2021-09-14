@@ -49,25 +49,28 @@ layout: full
   </section>
 
   <section class="event__organization">
-    {% for role in site.data.nav.roles %}
-      {% assign person_slug = page[role.slug] %}
-      {% if person_slug %}
-          {% for p in site.persons %}
-            {% assign slug = p.title | slugify: 'latin' %}
-            {% if slug == person_slug %}
-              {% assign person = p %}
-            {% endif %}
-          {% endfor %}
-          <article class="person">
-            <img src="{{ person.image }}" alt="{{ person.title }}" class="person__photo" width="500">
-            <h2 class="person__name">
-              {{ person.title }}
-            </h2>
-            <p class="person__description">{{ role.title }}</p>
-            <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer" class="person__contact">LinkedIn</a>
-          </article>
-      {% endif %}
-    {% endfor %}
+    <h2 class="event__organization__title">Organisation</h2>
+    <div class="event__organization__persons">
+        {% for role in site.data.nav.roles %}
+          {% assign person_slug = page[role.slug] %}
+          {% if person_slug %}
+              {% for p in site.persons %}
+                {% assign slug = p.title | slugify: 'latin' %}
+                {% if slug == person_slug %}
+                  {% assign person = p %}
+                {% endif %}
+              {% endfor %}
+              <article class="person">
+                <img src="{{ person.image }}" alt="{{ person.title }}" class="person__photo" width="500">
+                <h2 class="person__name">
+                  {{ person.title }} @ {{ person.company }}
+                </h2>
+                <p class="person__description">{{ role.title }}</p>
+                <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer" class="person__contact">LinkedIn</a>
+              </article>
+          {% endif %}
+        {% endfor %}
+    </div>
   </section>
 
   {% if page.twitch %}

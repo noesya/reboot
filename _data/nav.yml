@@ -37,7 +37,7 @@ roles:
     slug: animation
   - title: Responsable technique
     slug: tech
-  - title: Responsable relations
+  - title: Responsable relations intervenants
     slug: relation
   - title: Responsable modération
     slug: moderation

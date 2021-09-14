@@ -3,10 +3,21 @@ layout: full
 ---
 
 {% assign name = page.first_name | append: ' ' | append: page.last_name %}
+{% assign slug = page.title | slugify: 'latin' %}
 <div class="person">
   <img  src="/assets/images/people/{{ name | slugify: 'latin' }}.jpg"
         alt="{{ person.name }}"
         class="person__photo"
         width="500">
-  <p class="chapo">{{ name }}</p>
 </div>
+
+{% assign events = site.events | sort: 'start' %}
+{% for event in events %}
+    {% for role in site.data.nav.roles %}
+        {% if event[role.slug] == slug %}
+            <hr>
+            <p>{{ role.title }}</p>
+            {% include event.html event=event %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
