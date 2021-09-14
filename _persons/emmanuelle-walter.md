@@ -6,6 +6,6 @@ company: Arrêt sur Images
 description: Rédactrice en chef
 image: /assets/images/people/emmanuelle-walter.jpg
 linkedin: https://www.linkedin.com/in/emmanuelle-walter-494799217/
-team: true
-admin: true
+team: false
+admin: false
 ---
