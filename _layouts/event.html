@@ -63,7 +63,10 @@ layout: full
               <article class="person">
                 <img src="{{ person.image }}" alt="{{ person.title }}" class="person__photo" width="500">
                 <h2 class="person__name">
-                  {{ person.title }} @ {{ person.company }}
+                  {{ person.title }}
+                  {% if person.company %}
+                    @ {{ person.company }}
+                  {% endif %}
                 </h2>
                 <p class="person__description">{{ role.title }}</p>
                 <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer" class="person__contact">LinkedIn</a>
