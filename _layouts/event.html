@@ -4,6 +4,20 @@ layout: full
 
 <article class="event">
 
+  {% if page.twitch %}
+    <section class="event__video">
+      <div id="twitch-embed"></div>
+      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+      <script type="text/javascript">
+        new Twitch.Embed("twitch-embed", {
+          width: '100%',
+          height: 640,
+          channel: "{{ page.twitch }}"
+        });
+      </script>
+    </section>
+  {% endif %}
+
   <div class="event__informations">
     {% if page.kind %}
       <span class="event__kind">{{ page.kind }}</span>
@@ -22,7 +36,6 @@ layout: full
     </div>
   </div>
   <p class="event__description">{{ page.description | correct_punctuation }}</p>
-
 
   <section class="event__persons">
     {% for slug in page.persons %}
@@ -75,18 +88,4 @@ layout: full
         {% endfor %}
     </div>
   </section>
-
-  {% if page.twitch %}
-    <section class="event__video">
-      <div id="twitch-embed"></div>
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: '100%',
-          height: 640,
-          channel: "{{ page.twitch }}"
-        });
-      </script>
-    </section>
-  {% endif %}
 </article>
