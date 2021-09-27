@@ -47,12 +47,10 @@ layout: full
       {% endfor %}
       <article class="person">
         <img src="{{ person.image }}" alt="{{ person.title }}" class="person__photo" width="500">
-        <h2 class="person__name">
-          {{ person.title }}
-          {% if person.company %}
-            @ {{ person.company }}
-          {% endif %}
-        </h2>
+        <h2 class="person__name">{{ person.title }}</h2>
+        {% if person.company %}
+            <p class="person__company">@ {{ person.company }}</p>
+        {% endif %}
         {% if person.description %}
           <p class="person__description">{{ person.description }}</p>
         {% endif %}
@@ -62,7 +60,7 @@ layout: full
   </section>
 
   <section class="event__organization">
-    <h2 class="event__organization__title">Organisation</h2>
+    <h2 class="event__organization__title">Équipe technique</h2>
     <div class="event__organization__persons">
         {% for role in site.data.nav.roles %}
           {% assign person_slug = page[role.slug] %}
@@ -74,15 +72,10 @@ layout: full
                 {% endif %}
               {% endfor %}
               <article class="person">
-                <img src="{{ person.image }}" alt="{{ person.title }}" class="person__photo" width="500">
-                <h2 class="person__name">
+                <h3 class="person__name">
                   {{ person.title }}
-                  {% if person.company %}
-                    @ {{ person.company }}
-                  {% endif %}
-                </h2>
+                </h3>
                 <p class="person__description">{{ role.title }}</p>
-                <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer" class="person__contact">LinkedIn</a>
               </article>
           {% endif %}
         {% endfor %}

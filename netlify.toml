@@ -3,3 +3,9 @@
   to = "/equipe"
   status = 301
   force = false
+
+[[redirects]]
+  from = "/programme"
+  to = "/"
+  status = 301
+  force = false

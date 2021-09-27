@@ -1,11 +1,10 @@
 header:
   - title: Accueil
     slug: /
-  - title: Le programme
-    slug: /programme
+  - title: À propos
+    slug: /a-propos
   - title: Espace ressources
     slug: /ressources
-  # - title: Vous êtes...
   - title: Étudiant·e·s
     slug: /etudiants
   - title: Écoles
