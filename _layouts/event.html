@@ -75,7 +75,10 @@ layout: full
                 <h3 class="person__name">
                   {{ person.title }}
                 </h3>
-                <p class="person__description">{{ role.title }}</p>
+                <p class="person__description">
+                    {{ role.title }}<br>
+                    <a href="{{ person.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
+                </p>
               </article>
           {% endif %}
         {% endfor %}
