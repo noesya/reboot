@@ -45,7 +45,17 @@ nav
       &__close
         top: 15px
         right: 15px
+        &::after
+          background: black
+          position: fixed
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          z-index: -1
+          content: ""
     #menu
+      z-index: 10
       background: black
       top: 0
       right: 0
