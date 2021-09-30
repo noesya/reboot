@@ -25,6 +25,21 @@ layout: full
     </section>
   {% endif %}
 
+  {% if page.archive_twitch %}
+    <section class="event__video">
+        <h2>Le replay sur Twitch</h2>
+      <div id="twitch-embed"></div>
+      <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+      <script type="text/javascript">
+        new Twitch.Player("twitch-embed", {
+          width: '100%',
+          height: 640,
+          video: "{{ page.archive_twitch }}"
+        });
+      </script>
+    </section>
+  {% endif %}
+
   <div class="event__informations">
     {% if page.kind %}
       <span class="event__kind">{{ page.kind }}</span>
