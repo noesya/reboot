@@ -1,47 +1,40 @@
 ---
-title: À propos
-layout: default
+title: "Edition 2021"
 description: 2 jours pour hacker les métiers de la communication !
   Communication, publicité, relations presse, relations publiques, influence,
   numérique...
-permalink: /a-propos
-chapo: "**2 jours pour hacker les métiers de la com 🌍** <br>Pour changer le monde de la communication et rejoindre les pionniers et pionnières d’une communication en phase avec les mutations profondes de la société actuelle, participez à la première édition de “Reboot !”"
-text: "Communication, publicité, relations presse, relations publiques, influence, numérique… “Reboot !” a l’ambition de former et sensibiliser tous les étudiants en communication (au sens large) aux enjeux de responsabilité sociétale et environnementale. <br><br>
-
-**La communication responsable: c’est quoi ?** C’est encore l’Ademe qui en parle le mieux : “Dans un paysage économique et social en profonde mutation et marqué par de nouveaux enjeux (explosion du digital, multiplication des émetteurs de messages, émergence de fake news…), il est temps de laisser place à une communication plus responsable, plus sensible aux enjeux écologiques, davantage à l’écoute des citoyens tout en intégrant la notion d’urgence et en s’interrogeant autant sur la manière de délivrer les messages que sur leur contenu… Au-delà de ses propres pratiques, ce secteur a une responsabilité vis-à-vis des publics, et plus largement de la société dans son ensemble.”<br><br>
-
-**Et pendant ces 2 jours, il se passe quoi ?** “Reboot!” vous offre 2 jours de conférences de grande qualité et des ressources pédagogiques en accès libre."
-aside: "Vous êtes impatient·e de découvrir le programme ? [C'est ici !](/programme) Vous représentez une école ? [Ça se passe par là !](/ecoles/participer)
-Vous avez des ressources à partager ou vous voulez devenir partenaire ? [Ça se passe ici !](/partenaires/participer)"
+permalink: /
+chapo: "Le 30 septembre et le 1er octobre 2021, 61 écoles ont impliqué 8170 étudiantes et étudiants pour la **première édition de “Reboot !”**"
+text: ""
+verbatims:
+  - La durée des modules était idéale (1h30), très pratique d'avoir utilisé Twitch qui fonctionne très bien pour les lives et l'accès au chat
+  - Super organisation, super explication ! Vraiment TOP
+  - Superbe organisation ! La durée des conférences n'était ni trop longue, ni trop courte
+  - Excellent !
+  - "Bonne organisation de l'événement: connexion facile et bien guidée"
+  - L'organisation de l'évènement boosté par la visibilité sur Twitch est assez magistrale
+  - Un événement extraordinaire. Tous les sujets étaient passionnants et captivants.
+  - J'ai vraiment été bluffé de l'organisation, pour une première fois c'est incroyable d'arriver à un tel niveau !
+  - Je n'avais jamais envisagé la communication sous l'angle de l'éco-responsabilité, les intervenants m'ont fait comprendre à quel point c'est important d'y songer
+  - Les ateliers étaient très intéressants, nous ont permis de participer à l'expérience Reboot et les intervenants étaient très pédagogues
+  - J'ai appris et compris des choses concernant ma possible future voie
+  - Cela m'a fait prendre conscience que la communication plus responsable est possible
+  - Les intervenants s’adressaient à nous avec beaucoup de transparence
+  - Merci d'avoir crée un événement comme celui-ci !
+  - Très belle expérience, avec des propositions riches et denses, à portée des étudiants et dans un environnement numérique fluide. Bravo !
+  - Des intervenants professionnels qui savent de quoi ils parlent
+  - J'ai adoré, c'était très intéressant et enrichissant !
+  - On en ressort averti et mieux sensibilisé sur  notre environnement
+  - Certains ateliers étaient très enrichissants quelques conseils resteront ancrés dans ma tête
+  - C'était très intéressant et ça donne un sens au métier que je souhaite faire et [envie de] le pratiquer avec éthique et pour des causes positives
 ---
-{% include nav.html %}
-{% include breadcrumb.html %}
-<main>
-  <div class="index__hook">
-    <h1 class="index__hook__title">L'événement étudiant de la communication responsable</h1>
-    <img  src="/assets/images/index/dates.svg"
-          alt="Jeudi 30 septembre et vendredi 1er octobre - gratuit !"
-          class="index__hook__dates"
-          width="439" height="387">
 
-  </div>
-  <div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
-  <p>{{ page.text | markdownify | correct_punctuation }}</p>
-  <aside>
-    <p>{{ page.aside | markdownify | correct_punctuation }}</p>
-  </aside>
-  <h2 class="category">Avec la participation de...</h2>
-  <section class="partners partners--gold">
-    {% assign validated_partners = site.partners | where: 'level', 'gold' | where: 'validated', true %}
-    {% for partner in validated_partners %}
-    <article class="partner">
-      <a href="{{ partner.url }}">
-        <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid" width="500">
-      </a>
-      <h2><a href="{{ partner.url }}">{{ partner.title }}</a></h2>
-    </article>
-    {% endfor %}
-  </section>
-  {% include mailjet.html %}
-</main>
-{% include footer.html %}
+
+<h2 class="category">Verbatims</h2>
+<div class="verbatims">
+  {% for verbatim in page.verbatims %}
+    <div class="verbatim">
+      {{verbatim}}
+    </div>
+  {% endfor %}
+</div>

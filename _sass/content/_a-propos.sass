@@ -1,0 +1,18 @@
+.pages__index
+    .verbatims
+        @include grid
+        @include grid--large
+        .verbatim
+            position: relative
+            @include normal-text
+            padding-right: 30px
+            @include mobile
+                padding-right: 0
+            &::before
+                content: "“"
+                color: $color
+                font-size: 60px
+                display: block
+                position: absolute
+                top: 13px
+                left: -23px

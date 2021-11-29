@@ -3,10 +3,12 @@ header:
     slug: /
   - title: À propos
     slug: /a-propos
+  - title: Archives
+    slug: /programme
   - title: Espace ressources
     slug: /ressources
-  - title: Étudiant·e·s
-    slug: /etudiants
+  # - title: Étudiant·e·s
+  #   slug: /etudiants
   - title: Écoles
     slug: /ecoles
   - title: Partenaires

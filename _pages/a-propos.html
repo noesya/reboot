@@ -1,0 +1,47 @@
+---
+title: À propos
+layout: default
+description: 2 jours pour hacker les métiers de la communication !
+  Communication, publicité, relations presse, relations publiques, influence,
+  numérique...
+permalink: /a-propos
+chapo: "**2 jours pour hacker les métiers de la com 🌍** <br>Pour changer le monde de la communication et rejoindre les pionniers et pionnières d’une communication en phase avec les mutations profondes de la société actuelle, participez à la première édition de “Reboot !”"
+text: "Communication, publicité, relations presse, relations publiques, influence, numérique… “Reboot !” a l’ambition de former et sensibiliser tous les étudiants en communication (au sens large) aux enjeux de responsabilité sociétale et environnementale. <br><br>
+
+**La communication responsable: c’est quoi ?** C’est encore l’Ademe qui en parle le mieux : “Dans un paysage économique et social en profonde mutation et marqué par de nouveaux enjeux (explosion du digital, multiplication des émetteurs de messages, émergence de fake news…), il est temps de laisser place à une communication plus responsable, plus sensible aux enjeux écologiques, davantage à l’écoute des citoyens tout en intégrant la notion d’urgence et en s’interrogeant autant sur la manière de délivrer les messages que sur leur contenu… Au-delà de ses propres pratiques, ce secteur a une responsabilité vis-à-vis des publics, et plus largement de la société dans son ensemble.”<br><br>
+
+**Et pendant ces 2 jours, il se passe quoi ?** “Reboot!” vous offre 2 jours de conférences de grande qualité et des ressources pédagogiques en accès libre."
+aside: "Vous êtes impatient·e de découvrir le programme ? [C'est ici !](/programme) Vous représentez une école ? [Ça se passe par là !](/ecoles/participer)
+Vous avez des ressources à partager ou vous voulez devenir partenaire ? [Ça se passe ici !](/partenaires/participer)"
+---
+{% include nav.html %}
+{% include breadcrumb.html %}
+<main>
+  <div class="index__hook">
+    <h1 class="index__hook__title">L'événement étudiant de la communication responsable</h1>
+    <img  src="/assets/images/index/dates.svg"
+          alt="Jeudi 30 septembre et vendredi 1er octobre - gratuit !"
+          class="index__hook__dates"
+          width="439" height="387">
+
+  </div>
+  <div class="chapo">{{ page.chapo | markdownify | correct_punctuation }}</div>
+  <p>{{ page.text | markdownify | correct_punctuation }}</p>
+  <aside>
+    <p>{{ page.aside | markdownify | correct_punctuation }}</p>
+  </aside>
+  <h2 class="category">Avec la participation de...</h2>
+  <section class="partners partners--gold">
+    {% assign validated_partners = site.partners | where: 'level', 'gold' | where: 'validated', true %}
+    {% for partner in validated_partners %}
+    <article class="partner">
+      <a href="{{ partner.url }}">
+        <img src="/assets/images/partners/{{ partner.slug }}.png" alt="{{ partner.title }}" class="img-fluid" width="500">
+      </a>
+      <h2><a href="{{ partner.url }}">{{ partner.title }}</a></h2>
+    </article>
+    {% endfor %}
+  </section>
+  {% include mailjet.html %}
+</main>
+{% include footer.html %}
