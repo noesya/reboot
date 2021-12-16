@@ -1,4 +1,15 @@
 .pages__index
+    .figures
+        @include grid
+        @include grid--large
+        .figure
+            @include normal-text
+            span
+                @include large-text
+                font-weight: bold
+                color: $color
+                display: block
+                margin-bottom: 5px
     .verbatims
         @include grid
         @include grid--large
